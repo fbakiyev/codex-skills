@@ -23,8 +23,14 @@ REQUIRED_TEMPLATES = [
     "access-map.yaml",
     "adr.md",
     "backlog-item.yaml",
+    "backup-restore.md",
+    "deployment-map.yaml",
     "handoff.md",
+    "incident-report.md",
+    "observability.md",
     "runbook.md",
+    "security-notes.md",
+    "service-catalog.yaml",
     "skill-evolution-record.md",
     "sprint-brief.md",
 ]
@@ -129,11 +135,21 @@ def check_secret_leaks() -> None:
                 fail(f"possible secret leak in {rel}: {match.group(0)[:80]}")
 
 
+def check_xops_templates() -> None:
+    access_map = read_text(ROOT / "templates" / "access-map.yaml")
+    if "never_store_value: true" not in access_map:
+        fail("templates/access-map.yaml must include never_store_value: true")
+    runbook = read_text(ROOT / "templates" / "runbook.md")
+    if "Do not duplicate secret values" not in runbook:
+        fail("templates/runbook.md must warn against duplicating secret values")
+
+
 def main() -> None:
     check_required_paths()
     check_skills()
     check_agents()
     check_secret_leaks()
+    check_xops_templates()
     print("OK: repository structure is valid")
 
 

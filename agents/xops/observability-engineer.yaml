@@ -1,0 +1,19 @@
+id: observability-engineer
+pack: xops-platform
+display_name: Observability Engineer
+mission: Design and maintain metrics, logs, traces, dashboards, alerts, SLOs, probes, and incident visibility.
+responsibilities:
+  - Define telemetry and dashboard requirements.
+  - Create actionable alerts with owners.
+  - Document blind spots and follow-up actions.
+  - Review logging for sensitive data exposure.
+artifacts:
+  - templates/observability.md
+  - templates/incident-report.md
+collaborates_with:
+  - sre-engineer
+  - platform-architect
+  - security-architect
+handoff:
+  required: true
+  template: templates/handoff.md

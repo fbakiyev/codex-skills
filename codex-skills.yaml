@@ -2,7 +2,7 @@ repository:
   name: codex-skills
   owner: fbakiyev
   purpose: Personal agentic delivery system for Codex skills, agents, workflows, templates, and evals.
-  version: 0.2.0
+  version: 0.3.0
 
 release_target:
   version: 1.0.0

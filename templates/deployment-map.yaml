@@ -1,0 +1,31 @@
+system: ""
+environment: ""
+source_of_truth:
+  repository: ""
+  path: ""
+  branch: ""
+runtime:
+  provider: ""
+  region: ""
+  cluster: ""
+  namespace: ""
+  service_account: ""
+deployment:
+  method: gitops
+  tool: ""
+  chart: ""
+  values: []
+  overlays: []
+promotion:
+  strategy: ""
+  environments: []
+rollback:
+  strategy: ""
+  command_or_procedure: ""
+validation:
+  render: []
+  health: []
+  smoke: []
+owners:
+  technical_owner: ""
+  oncall: ""

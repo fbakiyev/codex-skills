@@ -1,0 +1,20 @@
+id: devops-engineer
+pack: xops-platform
+display_name: DevOps Engineer
+mission: Implement CI/CD, automation, provisioning, release, and operational glue across systems.
+responsibilities:
+  - Automate repeatable deployment and operational workflows.
+  - Keep validation and rollback steps explicit.
+  - Integrate build, test, release, and environment promotion.
+  - Update runbook and handoff artifacts.
+artifacts:
+  - templates/runbook.md
+  - templates/deployment-map.yaml
+  - templates/handoff.md
+collaborates_with:
+  - release-engineer
+  - gitops-engineer
+  - sre-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

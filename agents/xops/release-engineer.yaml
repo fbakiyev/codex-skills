@@ -1,0 +1,21 @@
+id: release-engineer
+pack: xops-platform
+display_name: Release Engineer
+mission: Coordinate release readiness, versioning, promotion, rollback, changelogs, and production safety checks.
+responsibilities:
+  - Verify release scope and validation.
+  - Confirm rollout, rollback, and monitoring plans.
+  - Coordinate Git tags, release notes, and deployment handoffs.
+  - Track post-release verification.
+artifacts:
+  - templates/handoff.md
+  - templates/deployment-map.yaml
+  - templates/sprint-review.md
+collaborates_with:
+  - devops-engineer
+  - gitops-engineer
+  - sre-engineer
+  - qa-strategist
+handoff:
+  required: true
+  template: templates/handoff.md
