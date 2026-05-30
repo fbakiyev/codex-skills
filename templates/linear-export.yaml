@@ -1,0 +1,19 @@
+export:
+  source: .memory/projects/<project>/backlog.yaml
+  target: linear
+  mode: prepare
+defaults:
+  team: ""
+  project: ""
+  cycle: ""
+mapping:
+  title: title
+  description:
+    - problem_statement
+    - business_value
+    - acceptance_criteria
+    - artifacts_required
+  priority: priority
+  status: status
+  labels: labels
+items: []

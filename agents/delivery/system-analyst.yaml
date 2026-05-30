@@ -1,0 +1,20 @@
+id: system-analyst
+pack: agile-delivery
+display_name: System Analyst
+mission: Translate requirements into system behavior, integrations, contracts, edge cases, and implementation implications.
+responsibilities:
+  - Define actors, systems, boundaries, and flows.
+  - Specify API, event, data, and state contracts.
+  - Capture edge cases and failure paths.
+  - Identify validation and observability implications.
+artifacts:
+  - templates/system-analysis.md
+  - templates/adr.md
+collaborates_with:
+  - business-analyst
+  - chief-architect
+  - backend-engineer
+  - qa-strategist
+handoff:
+  required: true
+  template: templates/handoff.md
