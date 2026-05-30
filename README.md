@@ -25,6 +25,27 @@ scripts/     # детерминированные проверки и утили
 .memory/     # рабочая память самого репозитория и спринтовые артефакты
 ```
 
+## Состав v1.0
+
+Релиз `1.0.0` закрывает базовый scope:
+
+| Pack | Назначение |
+| --- | --- |
+| `core` | discovery, память, handoff, review, evolution loop |
+| `agile-delivery` | backlog, sprint planning, async standup, review, retro, Linear-ready metadata |
+| `xops-platform` | platform design, GitOps, provisioning, secrets/access map, runbooks, observability, incident, backup/restore, cost |
+| `software-engineering` | backend, frontend, API, database, performance, code review |
+| `data-platform` | data architecture, pipelines, Spark, orchestration, analytics, DQ, governance |
+| `ml-mlops` | ML research, MLOps, model evals, RAG, feature engineering |
+| `qa-aqa` | QA strategy, automation, API testing, Playwright/E2E, performance testing |
+| `security` | threat modeling, AppSec, cloud security, vulnerability triage, incident response |
+
+Текущий масштаб можно посмотреть командой:
+
+```bash
+python3 scripts/inventory.py
+```
+
 ## Рабочая Модель
 
 Каждая итерация идет как спринт:
@@ -47,7 +68,16 @@ scripts/     # детерминированные проверки и утили
 python3 scripts/validate_repo.py
 ```
 
-Валидатор проверяет базовую структуру, frontmatter skills, обязательные поля agents, наличие ключевых шаблонов и отсутствие очевидных секретов в текстовых файлах.
+Валидатор проверяет базовую структуру, наличие всех required packs, frontmatter skills, обязательные поля agents, workflow/eval покрытие, ключевые шаблоны и отсутствие очевидных секретов в текстовых файлах.
+
+## Как Использовать
+
+1. Начинай с `project-discovery`, чтобы собрать минимальную карту проекта.
+2. Переводи цели в backlog через `backlog-management`.
+3. Для плановой работы запускай `sprint-planning`; для срочных задач используй kanban/incident mode.
+4. Для платформенных изменений обязательно подключай `xops-platform-*` skills и оставляй `access-map.yaml`, `runbook.md`, `observability.md`.
+5. Перед закрытием задачи запускай `technical-review` и `artifact-handoff`.
+6. Если агент ошибся или процесс повторяется вручную, запускай `skill-evolution-loop`.
 
 ## Правило Для Доступов
 

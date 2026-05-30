@@ -22,18 +22,85 @@ REQUIRED_TOP_LEVEL = [
 REQUIRED_TEMPLATES = [
     "access-map.yaml",
     "adr.md",
+    "api-contract.md",
     "backlog-item.yaml",
     "backup-restore.md",
+    "data-analysis.md",
+    "data-contract.yaml",
     "deployment-map.yaml",
+    "eval-report.md",
     "handoff.md",
     "incident-report.md",
+    "linear-export.yaml",
+    "model-card.md",
     "observability.md",
+    "performance-report.md",
+    "requirements-brief.md",
+    "retro.md",
     "runbook.md",
     "security-notes.md",
     "service-catalog.yaml",
     "skill-evolution-record.md",
     "sprint-brief.md",
+    "sprint-review.md",
+    "standup-update.md",
+    "system-analysis.md",
+    "system-design.md",
+    "test-plan.md",
+    "threat-model.md",
+    "vulnerability-triage.md",
 ]
+
+REQUIRED_PACKS = {
+    "core": {
+        "skills": "skills/core",
+        "agents": "agents/core",
+        "workflows": "workflows/core",
+        "evals": "evals/sample-tasks/core",
+    },
+    "agile-delivery": {
+        "skills": "skills/agile-delivery",
+        "agents": "agents/delivery",
+        "workflows": "workflows/agile",
+        "evals": "evals/sample-tasks/agile",
+    },
+    "xops-platform": {
+        "skills": "skills/xops-platform",
+        "agents": "agents/xops",
+        "workflows": "workflows/xops",
+        "evals": "evals/sample-tasks/xops",
+    },
+    "software-engineering": {
+        "skills": "skills/software-engineering",
+        "agents": "agents/engineering",
+        "workflows": "workflows/engineering",
+        "evals": "evals/sample-tasks/engineering",
+    },
+    "data-platform": {
+        "skills": "skills/data-platform",
+        "agents": "agents/data",
+        "workflows": "workflows/data",
+        "evals": "evals/sample-tasks/data",
+    },
+    "ml-mlops": {
+        "skills": "skills/ml-mlops",
+        "agents": "agents/ml",
+        "workflows": "workflows/ml",
+        "evals": "evals/sample-tasks/ml",
+    },
+    "qa-aqa": {
+        "skills": "skills/qa-aqa",
+        "agents": "agents/qa",
+        "workflows": "workflows/qa",
+        "evals": "evals/sample-tasks/qa",
+    },
+    "security": {
+        "skills": "skills/security",
+        "agents": "agents/security",
+        "workflows": "workflows/security",
+        "evals": "evals/sample-tasks/security",
+    },
+}
 
 TEXT_EXTENSIONS = {
     ".md",
@@ -69,6 +136,23 @@ def check_required_paths() -> None:
     for item in REQUIRED_TEMPLATES:
         if not (ROOT / "templates" / item).exists():
             fail(f"missing required template: templates/{item}")
+
+
+def check_required_packs() -> None:
+    for pack, paths in REQUIRED_PACKS.items():
+        skills_dir = ROOT / paths["skills"]
+        agents_dir = ROOT / paths["agents"]
+        workflows_dir = ROOT / paths["workflows"]
+        evals_dir = ROOT / paths["evals"]
+
+        if not any(skills_dir.rglob("SKILL.md")):
+            fail(f"pack {pack} has no skills under {paths['skills']}")
+        if not any(agents_dir.glob("*.yaml")):
+            fail(f"pack {pack} has no agents under {paths['agents']}")
+        if not any(workflows_dir.glob("*.md")):
+            fail(f"pack {pack} has no workflows under {paths['workflows']}")
+        if not any(evals_dir.glob("*.md")):
+            fail(f"pack {pack} has no eval samples under {paths['evals']}")
 
 
 def parse_frontmatter(text: str) -> dict[str, str]:
@@ -146,6 +230,7 @@ def check_xops_templates() -> None:
 
 def main() -> None:
     check_required_paths()
+    check_required_packs()
     check_skills()
     check_agents()
     check_secret_leaks()

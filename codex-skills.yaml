@@ -2,10 +2,11 @@ repository:
   name: codex-skills
   owner: fbakiyev
   purpose: Personal agentic delivery system for Codex skills, agents, workflows, templates, and evals.
-  version: 0.4.0
+  version: 1.0.0
 
 release_target:
   version: 1.0.0
+  status: achieved
   required_packs:
     - core
     - agile-delivery
@@ -33,3 +34,37 @@ standards:
     - raw_secrets
     - secret_values_in_markdown
     - base64_kubernetes_secret_values
+
+packs:
+  core:
+    skills: skills/core
+    agents: agents/core
+    workflows: workflows/core
+  agile-delivery:
+    skills: skills/agile-delivery
+    agents: agents/delivery
+    workflows: workflows/agile
+  xops-platform:
+    skills: skills/xops-platform
+    agents: agents/xops
+    workflows: workflows/xops
+  software-engineering:
+    skills: skills/software-engineering
+    agents: agents/engineering
+    workflows: workflows/engineering
+  data-platform:
+    skills: skills/data-platform
+    agents: agents/data
+    workflows: workflows/data
+  ml-mlops:
+    skills: skills/ml-mlops
+    agents: agents/ml
+    workflows: workflows/ml
+  qa-aqa:
+    skills: skills/qa-aqa
+    agents: agents/qa
+    workflows: workflows/qa
+  security:
+    skills: skills/security
+    agents: agents/security
+    workflows: workflows/security
