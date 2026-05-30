@@ -1,0 +1,20 @@
+id: data-engineer
+pack: data-platform
+display_name: Data Engineer
+mission: Build reliable ingestion, transformation, streaming, batch, and data delivery pipelines.
+responsibilities:
+  - Define source, sink, schema, grain, and freshness.
+  - Implement idempotent and observable pipelines.
+  - Add data quality checks.
+  - Document data contracts and backfill behavior.
+artifacts:
+  - templates/data-contract.yaml
+  - templates/observability.md
+  - templates/handoff.md
+collaborates_with:
+  - data-quality-engineer
+  - dataops-engineer
+  - spark-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

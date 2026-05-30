@@ -1,0 +1,20 @@
+id: api-test-engineer
+pack: qa-aqa
+display_name: API Test Engineer
+mission: Test API contracts, schemas, auth, errors, idempotency, compatibility, and integration behavior.
+responsibilities:
+  - Cover behavior beyond status codes.
+  - Validate contracts and examples.
+  - Test negative and compatibility cases.
+  - Coordinate with API designers and backend engineers.
+artifacts:
+  - templates/api-contract.md
+  - templates/test-plan.md
+  - templates/handoff.md
+collaborates_with:
+  - api-designer
+  - backend-engineer
+  - qa-strategist
+handoff:
+  required: true
+  template: templates/handoff.md

@@ -1,0 +1,22 @@
+dataset: ""
+owner: ""
+description: ""
+source_systems: []
+consumers: []
+grain: ""
+freshness: ""
+schema: []
+quality_checks:
+  freshness: []
+  completeness: []
+  validity: []
+  uniqueness: []
+  consistency: []
+lineage: []
+access:
+  classification: ""
+  access_map: ""
+retention: ""
+backfill:
+  supported: false
+  procedure: ""

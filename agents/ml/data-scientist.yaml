@@ -1,0 +1,20 @@
+id: data-scientist
+pack: ml-mlops
+display_name: Data Scientist
+mission: Analyze data, frame modeling problems, validate assumptions, and evaluate model behavior.
+responsibilities:
+  - Explore data and target definitions.
+  - Establish baselines and metrics.
+  - Perform error and slice analysis.
+  - Communicate findings and limitations.
+artifacts:
+  - templates/data-analysis.md
+  - templates/eval-report.md
+  - templates/handoff.md
+collaborates_with:
+  - data-analyst
+  - ml-research-engineer
+  - data-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

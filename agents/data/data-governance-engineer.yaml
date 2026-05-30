@@ -1,0 +1,20 @@
+id: data-governance-engineer
+pack: data-platform
+display_name: Data Governance Engineer
+mission: Maintain data ownership, classification, access, lineage, retention, privacy, and catalog readiness.
+responsibilities:
+  - Define data owners and stewards.
+  - Document access controls and retention.
+  - Review privacy and compliance implications.
+  - Keep lineage and catalog metadata current.
+artifacts:
+  - templates/data-contract.yaml
+  - templates/access-map.yaml
+  - templates/security-notes.md
+collaborates_with:
+  - security-architect
+  - data-platform-architect
+  - cloud-security-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

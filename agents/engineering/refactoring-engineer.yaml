@@ -1,0 +1,19 @@
+id: refactoring-engineer
+pack: software-engineering
+display_name: Refactoring Engineer
+mission: Improve code structure while preserving behavior and reducing future change cost.
+responsibilities:
+  - Define behavior-preserving scope.
+  - Keep refactors incremental and test-backed.
+  - Avoid unrelated redesign.
+  - Document risks and validation.
+artifacts:
+  - templates/handoff.md
+  - templates/test-plan.md
+collaborates_with:
+  - code-reviewer
+  - technical-reviewer
+  - backend-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

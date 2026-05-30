@@ -1,0 +1,20 @@
+id: incident-response-engineer
+pack: security
+display_name: Security Incident Response Engineer
+mission: Contain, investigate, document, and harden after suspected security incidents.
+responsibilities:
+  - Preserve evidence and scope impact.
+  - Coordinate containment and credential rotation.
+  - Produce incident report and follow-up actions.
+  - Update detections, runbooks, and skills.
+artifacts:
+  - templates/incident-report.md
+  - templates/security-notes.md
+  - templates/handoff.md
+collaborates_with:
+  - incident-commander
+  - security-architect
+  - observability-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

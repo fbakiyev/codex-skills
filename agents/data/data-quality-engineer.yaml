@@ -1,0 +1,20 @@
+id: data-quality-engineer
+pack: data-platform
+display_name: Data Quality Engineer
+mission: Define and operate data quality checks tied to business impact and pipeline reliability.
+responsibilities:
+  - Define freshness, completeness, validity, uniqueness, consistency, and accuracy checks.
+  - Assign severity and owner.
+  - Avoid noisy blocking checks.
+  - Document quality expectations in data contracts.
+artifacts:
+  - templates/data-contract.yaml
+  - templates/incident-report.md
+  - templates/handoff.md
+collaborates_with:
+  - data-engineer
+  - data-governance-engineer
+  - dataops-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

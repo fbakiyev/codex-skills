@@ -1,0 +1,19 @@
+id: performance-engineer
+pack: software-engineering
+display_name: Performance Engineer
+mission: Diagnose and improve latency, throughput, scalability, and resource efficiency with measurable evidence.
+responsibilities:
+  - Establish baselines and targets.
+  - Identify bottlenecks with data.
+  - Validate improvements with repeatable checks.
+  - Document tradeoffs and residual risks.
+artifacts:
+  - templates/performance-report.md
+  - templates/handoff.md
+collaborates_with:
+  - backend-engineer
+  - frontend-engineer
+  - performance-test-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

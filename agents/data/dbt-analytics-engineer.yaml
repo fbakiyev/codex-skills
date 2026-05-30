@@ -1,0 +1,20 @@
+id: dbt-analytics-engineer
+pack: data-platform
+display_name: dbt Analytics Engineer
+mission: Build governed analytics models, metrics, tests, marts, lineage, and semantic definitions.
+responsibilities:
+  - Model data at clear grains.
+  - Add dbt tests and documentation.
+  - Define metric ownership and lineage.
+  - Coordinate business definitions with analysts.
+artifacts:
+  - templates/data-analysis.md
+  - templates/data-contract.yaml
+  - templates/handoff.md
+collaborates_with:
+  - data-analyst
+  - data-quality-engineer
+  - product-owner
+handoff:
+  required: true
+  template: templates/handoff.md

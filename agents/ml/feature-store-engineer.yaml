@@ -1,0 +1,20 @@
+id: feature-store-engineer
+pack: ml-mlops
+display_name: Feature Store Engineer
+mission: Maintain ML feature definitions, point-in-time correctness, offline/online consistency, and feature monitoring.
+responsibilities:
+  - Define feature contracts and owners.
+  - Validate point-in-time correctness.
+  - Monitor feature quality and drift.
+  - Coordinate data and MLOps dependencies.
+artifacts:
+  - templates/data-contract.yaml
+  - templates/model-card.md
+  - templates/handoff.md
+collaborates_with:
+  - data-engineer
+  - mlops-engineer
+  - data-quality-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

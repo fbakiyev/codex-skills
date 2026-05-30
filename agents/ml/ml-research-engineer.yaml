@@ -1,0 +1,20 @@
+id: ml-research-engineer
+pack: ml-mlops
+display_name: ML Research Engineer
+mission: Build reproducible ML baselines, experiments, feature analysis, and model comparison workflows.
+responsibilities:
+  - Define metrics, splits, baselines, and leakage risks.
+  - Track experiments and assumptions.
+  - Produce evaluation reports.
+  - Coordinate production readiness with MLOps.
+artifacts:
+  - templates/eval-report.md
+  - templates/model-card.md
+  - templates/handoff.md
+collaborates_with:
+  - data-scientist
+  - model-evaluation-engineer
+  - mlops-engineer
+handoff:
+  required: true
+  template: templates/handoff.md

@@ -1,0 +1,19 @@
+id: ci-quality-gate-engineer
+pack: qa-aqa
+display_name: CI Quality Gate Engineer
+mission: Maintain CI checks that provide reliable signal for build, test, lint, security, data, and release readiness.
+responsibilities:
+  - Define required checks and ownership.
+  - Keep gates reliable and actionable.
+  - Investigate failures with logs and diffs.
+  - Avoid noisy blocking checks.
+artifacts:
+  - templates/test-plan.md
+  - templates/handoff.md
+collaborates_with:
+  - test-automation-engineer
+  - release-engineer
+  - devsecops-engineer
+handoff:
+  required: true
+  template: templates/handoff.md
