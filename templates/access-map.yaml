@@ -1,0 +1,30 @@
+system: ""
+environment: ""
+owners:
+  technical_owner: ""
+  business_owner: ""
+entrypoints:
+  ui: ""
+  api: ""
+auth:
+  method: ""
+  identity_provider: ""
+  required_groups: []
+secrets:
+  - name: ""
+    provider: vault
+    path: ""
+    key: ""
+    access_role: ""
+    rotation: ""
+    never_store_value: true
+validation:
+  safe_check: []
+access_request:
+  system: ""
+  template: ""
+  approver: ""
+breakglass:
+  allowed: false
+  location: ""
+  approval_required: true

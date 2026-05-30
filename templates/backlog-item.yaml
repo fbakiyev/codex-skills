@@ -1,0 +1,22 @@
+id: PROJECT-000
+title: Short task title
+type: feature
+status: ready
+priority: medium
+owner_agent: delivery-lead
+review_agents:
+  - technical-reviewer
+business_value: ""
+problem_statement: ""
+acceptance_criteria:
+  - ""
+artifacts_required:
+  - handoff.md
+dependencies: []
+risks: []
+labels: []
+linear:
+  team: ""
+  project: ""
+  cycle: ""
+  issue_id: ""

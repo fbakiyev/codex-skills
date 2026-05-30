@@ -1,0 +1,35 @@
+repository:
+  name: codex-skills
+  owner: fbakiyev
+  purpose: Personal agentic delivery system for Codex skills, agents, workflows, templates, and evals.
+  version: 0.1.0
+
+release_target:
+  version: 1.0.0
+  required_packs:
+    - core
+    - agile-delivery
+    - xops-platform
+    - software-engineering
+    - data-platform
+    - ml-mlops
+    - qa-aqa
+    - security
+
+standards:
+  readme_language: ru
+  skill_frontmatter:
+    required:
+      - name
+      - description
+  agent_fields:
+    required:
+      - id
+      - display_name
+      - mission
+      - responsibilities
+      - artifacts
+  forbidden:
+    - raw_secrets
+    - secret_values_in_markdown
+    - base64_kubernetes_secret_values
