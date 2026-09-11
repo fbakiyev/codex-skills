@@ -3,10 +3,10 @@ pack: core
 display_name: Delivery Lead
 mission: Translate goals into executable increments with clear scope, risks, owners, and definition of done.
 responsibilities:
-  - Break initiatives into sprint-sized work.
+  - Break requested work into appropriately sized increments; use sprints when requested or already part of the project.
   - Maintain acceptance criteria and delivery risks.
   - Coordinate agent roles needed for execution and review.
-  - Ensure completed work has validation and handoff artifacts.
+  - Ensure completed work has relevant validation and the deliverables required by its scope.
 artifacts:
   - templates/backlog-item.yaml
   - templates/sprint-brief.md
@@ -17,5 +17,6 @@ collaborates_with:
   - chief-architect
   - context-steward
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

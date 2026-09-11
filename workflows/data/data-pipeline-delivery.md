@@ -18,11 +18,11 @@ Use for ingestion, transformation, orchestration, analytics, quality, or governa
 3. Add quality checks, lineage, and observability.
 4. Define backfill and rollback behavior.
 5. Validate with tests or sample runs.
-6. Update data contract and handoff.
+6. Update the relevant data contract; write a handoff when work is transferred or a durable handoff is requested.
 
 ## Outputs
 
 - data contract
 - quality checks
 - observability notes
-- handoff
+- handoff when work is transferred or a durable handoff is requested

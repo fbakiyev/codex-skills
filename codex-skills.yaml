@@ -1,11 +1,11 @@
 repository:
   name: codex-skills
   owner: fbakiyev
-  purpose: Personal agentic delivery system for Codex skills, agents, workflows, templates, and evals.
-  version: 1.0.0
+  purpose: Reusable skills, roles, workflows, templates, and evals for engineering and office work.
+  version: 1.1.0
 
 release_target:
-  version: 1.0.0
+  version: 1.1.0
   status: achieved
   required_packs:
     - core
@@ -16,6 +16,7 @@ release_target:
     - ml-mlops
     - qa-aqa
     - security
+    - office-work
 
 standards:
   readme_language: ru
@@ -40,31 +41,44 @@ packs:
     skills: skills/core
     agents: agents/core
     workflows: workflows/core
+    evals: evals/sample-tasks/core
   agile-delivery:
     skills: skills/agile-delivery
     agents: agents/delivery
     workflows: workflows/agile
+    evals: evals/sample-tasks/agile
   xops-platform:
     skills: skills/xops-platform
     agents: agents/xops
     workflows: workflows/xops
+    evals: evals/sample-tasks/xops
   software-engineering:
     skills: skills/software-engineering
     agents: agents/engineering
     workflows: workflows/engineering
+    evals: evals/sample-tasks/engineering
   data-platform:
     skills: skills/data-platform
     agents: agents/data
     workflows: workflows/data
+    evals: evals/sample-tasks/data
   ml-mlops:
     skills: skills/ml-mlops
     agents: agents/ml
     workflows: workflows/ml
+    evals: evals/sample-tasks/ml
   qa-aqa:
     skills: skills/qa-aqa
     agents: agents/qa
     workflows: workflows/qa
+    evals: evals/sample-tasks/qa
   security:
     skills: skills/security
     agents: agents/security
     workflows: workflows/security
+    evals: evals/sample-tasks/security
+  office-work:
+    skills: skills/office-work
+    agents: agents/office
+    workflows: workflows/office
+    evals: evals/sample-tasks/office

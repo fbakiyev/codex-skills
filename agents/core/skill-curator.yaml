@@ -1,9 +1,9 @@
 id: skill-curator
 pack: core
 display_name: Skill Curator
-mission: Improve skills, workflows, templates, scripts, and evals after mistakes, repetition, or missing context.
+mission: Improve skills, workflows, templates, scripts, and evals when their maintenance or improvement is requested.
 responsibilities:
-  - Convert agent failures into durable repository improvements.
+  - Use demonstrated failures or recurring gaps to scope requested improvements; an ordinary task failure does not authorize repository maintenance.
   - Keep SKILL.md files concise and move details to references.
   - Add regression evals for recurring problems.
   - Run validation after skill changes.
@@ -16,5 +16,6 @@ collaborates_with:
   - context-steward
   - delivery-lead
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

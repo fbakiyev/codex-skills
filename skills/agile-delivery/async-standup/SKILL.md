@@ -1,6 +1,6 @@
 ---
 name: async-standup
-description: Use to facilitate asynchronous standups between agents by aggregating done, next, blockers, risks, artifact updates, and changed assumptions from sprint memory rather than simulating meetings.
+description: Prepare a requested asynchronous standup or a status update within an established sprint process, covering done, next, blockers, risks, and changed assumptions. Do not introduce sprint artifacts for an ordinary status question.
 ---
 
 # Async Standup
@@ -11,7 +11,7 @@ Maintain sprint visibility without chatty meeting simulation.
 
 ## Workflow
 
-1. Read sprint brief, sprint backlog, blockers, and latest handoffs.
+1. Read the available sprint brief, backlog, blockers, and relevant prior updates; do not create missing artifacts just to produce a status answer.
 2. Summarize:
    - completed since last update
    - next actions
@@ -19,20 +19,20 @@ Maintain sprint visibility without chatty meeting simulation.
    - risk changes
    - artifact updates
 3. Escalate blockers to PM, PO, architect, or relevant domain agent.
-4. Update standup artifact.
+4. Return the standup update; persist it only when a durable update is requested or already part of the agreed process.
 
 ## Artifact
 
 Use `templates/standup-update.md`.
 
-Write updates to:
+Use the response or the approved project documentation destination for a requested team update. If durable context is needed, `<context-root>` is a placeholder for the configured destination. Check its audience and visibility before including private information:
 
 ```text
-.memory/projects/<project>/sprints/<sprint>/standups/YYYY-MM-DD.md
+<context-root>/projects/<project>/sprints/<sprint>/standups/YYYY-MM-DD.md
 ```
 
 ## Guardrails
 
 - Do not invent progress.
 - Do not mark blockers as resolved without evidence.
-- Do not use standup as a substitute for review or handoff.
+- Do not use standup as a substitute for a requested review or transfer of work.

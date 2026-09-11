@@ -16,5 +16,6 @@ collaborates_with:
   - devsecops-engineer
   - platform-architect
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

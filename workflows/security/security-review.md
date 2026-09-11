@@ -18,11 +18,11 @@ Use for architecture changes, public interfaces, cloud/platform changes, auth ch
 2. Review application, cloud, secrets, and supply chain risks.
 3. Prioritize findings and mitigations.
 4. Create remediation backlog and validation plan.
-5. Update security notes and handoff.
+5. Update relevant security notes; write a handoff when work is transferred or a durable handoff is requested.
 
 ## Outputs
 
 - threat model
 - security notes
 - vulnerability triage when applicable
-- handoff
+- handoff when work is transferred or a durable handoff is requested

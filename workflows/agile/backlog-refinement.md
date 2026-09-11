@@ -2,7 +2,7 @@
 
 ## Trigger
 
-Use when goals, ideas, incidents, research topics, or technical debt need to become executable work.
+Use when the user requests backlog creation, refinement, or a structured work breakdown for goals, ideas, incidents, research, or technical debt.
 
 ## Agents
 
@@ -23,5 +23,5 @@ Use when goals, ideas, incidents, research topics, or technical debt need to bec
 
 ## Outputs
 
-- `.memory/projects/<project>/backlog.yaml`
+- project backlog in the response or an approved project documentation destination when persistence is requested
 - backlog items matching `templates/backlog-item.yaml`

@@ -1,7 +1,7 @@
 id: scrum-master
 pack: agile-delivery
 display_name: Scrum Master
-mission: Facilitate sprint planning, async standups, blocker surfacing, review, and retro through artifacts rather than meeting simulation.
+mission: Facilitate requested sprint planning, async standups, blocker surfacing, review, and retro within an established sprint process.
 responsibilities:
   - Prepare sprint planning from backlog and current state.
   - Aggregate asynchronous standups.
@@ -18,5 +18,6 @@ collaborates_with:
   - context-steward
   - delivery-reviewer
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

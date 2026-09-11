@@ -20,7 +20,7 @@ Use for platform, infrastructure, GitOps, cloud, cluster, observability, databas
 4. Add observability, backup/restore, security notes, and runbook.
 5. Validate plan/render/diff and health checks.
 6. Review with SRE and security where needed.
-7. Write handoff.
+7. Summarize validation and remaining risks; write a handoff when work is transferred or a durable handoff is requested.
 
 ## Outputs
 
@@ -31,4 +31,4 @@ Use for platform, infrastructure, GitOps, cloud, cluster, observability, databas
 - observability notes
 - backup/restore notes
 - security notes
-- handoff
+- handoff when work is transferred or a durable handoff is requested

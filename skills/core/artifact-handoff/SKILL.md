@@ -1,40 +1,16 @@
 ---
 name: artifact-handoff
-description: Use before ending a task, transferring work to another agent, closing a sprint item, or summarizing implementation, validation, risks, decisions, and next steps as durable artifacts.
+description: Prepare a resumable handoff when work is being transferred or a durable completion record is requested. Capture verified state, decisions, blockers, and next actions; ordinary task completion alone does not require a handoff document.
 ---
 
 # Artifact Handoff
 
-## Goal
+1. Establish what the receiving person needs to continue and where the record belongs. Reuse an already approved destination.
+2. Read the relevant deliverables and verification results. Separate completed work from attempted, pending, or unavailable work.
+3. Include exact relevant commands or queries and outcomes. For time-dependent diagnosis, include source, observation window, timezone, and coverage limits.
+4. State consequential decisions, blockers, material risks, and concrete next actions. Link authoritative artifacts instead of duplicating them.
+5. Deliver the handoff in the requested format. If no persistent destination is agreed, provide it in the response while continuing any independent authorized work.
 
-Create a concise handoff that another agent can use to continue without reading the conversation.
+The record needs only context, completed work, validation, decisions, blockers, artifact links, and next actions that actually matter. Omit empty sections. `templates/handoff.md` is optional when this repository is available.
 
-## Workflow
-
-1. Collect completed work from code/docs/artifacts, not only from memory.
-2. Record validation commands and outcomes.
-3. List decisions and link to ADRs if they exist.
-4. Record residual risks and open questions.
-5. Write next steps as concrete actions.
-
-## Output
-
-Use `templates/handoff.md`.
-
-For sprint work, write to:
-
-```text
-.memory/projects/<project>/sprints/<sprint>/handoff.md
-```
-
-For repository work, write to:
-
-```text
-.memory/repo/sprints/<sprint>.md
-```
-
-## Guardrails
-
-- Do not claim validation passed unless it actually ran or was manually verified.
-- Do not include raw credentials, tokens, or private values.
-- Do not bury blockers in prose; list them explicitly.
+Store continuity notes and project handover documents in the destination chosen by the user or project. Check its audience and visibility before including private context. Never include secret values or invent a successful check.

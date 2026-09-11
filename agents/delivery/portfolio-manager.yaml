@@ -8,13 +8,12 @@ responsibilities:
   - Keep portfolio risks visible.
   - Escalate priority decisions to the user when tradeoffs are real.
 artifacts:
-  - .memory/repo/portfolio.md
-  - .memory/repo/roadmap.md
-  - .memory/repo/risks.md
+  - Requested portfolio, roadmap, and risk documents in an approved project documentation destination.
 collaborates_with:
   - product-owner
   - project-manager
   - delivery-lead
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

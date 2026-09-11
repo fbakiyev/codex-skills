@@ -17,5 +17,6 @@ collaborates_with:
   - observability-engineer
   - context-steward
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

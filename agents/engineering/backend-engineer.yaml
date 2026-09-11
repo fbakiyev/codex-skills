@@ -6,7 +6,7 @@ responsibilities:
   - Follow existing backend patterns.
   - Add tests for changed behavior.
   - Document API or data contract changes.
-  - Leave validation and handoff.
+  - Report validation and remaining risks; provide a handoff when work is transferred or requested.
 artifacts:
   - templates/api-contract.md
   - templates/handoff.md
@@ -15,5 +15,6 @@ collaborates_with:
   - database-engineer
   - qa-strategist
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

@@ -1,40 +1,14 @@
 ---
 name: technical-review
-description: Use to review code, infrastructure, data, ML, documentation, security, or workflow changes for bugs, regressions, missing validation, operational risk, and artifact completeness before handoff or merge.
+description: Review a proposed technical or documentation change for concrete defects, regressions, validation gaps, and operational risk. Use for a review request or a consequential change needing independent scrutiny, not for ceremonial approval of every small edit.
 ---
 
 # Technical Review
 
-## Stance
+1. Establish the changed behavior and the acceptance criteria from the request and applicable project rules.
+2. Inspect the diff and related contracts. Prioritize failures that users or operators can encounter over stylistic preferences.
+3. Check evidence proportionate to the change. Verify relevant commands when available; do not rerun successful checks without a new change or unresolved concern.
+4. Check operational documents only when affected: for example, a changed recovery procedure needs corresponding runbook and rollback information.
+5. Report actionable findings in severity order, with location, concrete trigger, impact, and suggested correction. Use `P0`–`P3` when the project uses these levels.
 
-Prioritize findings over summaries. Review for correctness, operability, maintainability, security, and evidence.
-
-## Workflow
-
-1. Inspect the diff and related context.
-2. Identify behavioral risks, broken contracts, missing tests, missing artifacts, and security issues.
-3. Check whether the change updated required memory and handoff artifacts.
-4. Verify validation commands where practical.
-5. Output findings ordered by severity.
-
-## Finding Format
-
-- Severity: `P0`, `P1`, `P2`, or `P3`
-- Location: file and line when available
-- Problem: concrete behavior or risk
-- Fix: actionable recommendation
-
-## Review Gates
-
-Block completion when:
-
-- validation is absent for risky changes
-- xOps changes lack access map or runbook
-- secrets are exposed
-- acceptance criteria are untestable
-- handoff is missing after multi-step work
-
-## Guardrails
-
-- Do not nitpick style unless it affects maintainability or local standards.
-- Do not invent requirements; tie findings to task scope, repository rules, or observable behavior.
+Tie every finding to evidence or an explicit requirement. Do not invent a gate for missing sprint records, private notes, or handoff when the task does not require them. If there are no findings, say so and identify material verification limits. A review request authorizes inspection and reporting; implement fixes only if they are also in scope.

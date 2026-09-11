@@ -16,5 +16,6 @@ collaborates_with:
   - technical-reviewer
   - test-automation-engineer
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

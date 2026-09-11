@@ -1,48 +1,37 @@
 #!/usr/bin/env python3
-"""Print a compact inventory of packs, skills, agents, workflows, templates, and evals."""
+"""Print inventory using the repository catalog's pack paths."""
 
 from __future__ import annotations
 
-from pathlib import Path
+import sys
 
-ROOT = Path(__file__).resolve().parents[1]
-
-PACKS = {
-    "core": ("skills/core", "agents/core", "workflows/core", "evals/sample-tasks/core"),
-    "agile-delivery": ("skills/agile-delivery", "agents/delivery", "workflows/agile", "evals/sample-tasks/agile"),
-    "xops-platform": ("skills/xops-platform", "agents/xops", "workflows/xops", "evals/sample-tasks/xops"),
-    "software-engineering": ("skills/software-engineering", "agents/engineering", "workflows/engineering", "evals/sample-tasks/engineering"),
-    "data-platform": ("skills/data-platform", "agents/data", "workflows/data", "evals/sample-tasks/data"),
-    "ml-mlops": ("skills/ml-mlops", "agents/ml", "workflows/ml", "evals/sample-tasks/ml"),
-    "qa-aqa": ("skills/qa-aqa", "agents/qa", "workflows/qa", "evals/sample-tasks/qa"),
-    "security": ("skills/security", "agents/security", "workflows/security", "evals/sample-tasks/security"),
-}
+if __package__:
+    from .validate_repo import ROOT, PACK_PATTERNS, ValidationError, iter_files, load_catalog, pack_files
+else:
+    from validate_repo import ROOT, PACK_PATTERNS, ValidationError, iter_files, load_catalog, pack_files
 
 
-def count(pattern: str) -> int:
-    return len(list(ROOT.glob(pattern)))
-
-
-def main() -> None:
-    version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-    print(f"codex-skills version: {version}")
+def main() -> int:
+    try:
+        catalog = load_catalog(ROOT)
+    except ValidationError as error:
+        print(f"ERROR: {error}")
+        return 1
+    print(f"codex-skills version: {catalog['repository']['version']}")
     print()
     print("pack,skills,agents,workflows,evals")
-    for pack, (skills, agents, workflows, evals) in PACKS.items():
-        print(
-            f"{pack},"
-            f"{len(list((ROOT / skills).rglob('SKILL.md')))},"
-            f"{len(list((ROOT / agents).glob('*.yaml')))},"
-            f"{len(list((ROOT / workflows).glob('*.md')))},"
-            f"{len(list((ROOT / evals).glob('*.md')))}"
-        )
+    totals = dict.fromkeys(PACK_PATTERNS, 0)
+    for pack, paths in catalog["packs"].items():
+        counts = {kind: len(pack_files(ROOT, paths, kind)) for kind in PACK_PATTERNS}
+        print(",".join([pack, *(str(count) for count in counts.values())]))
+        for kind, count in counts.items():
+            totals[kind] += count
     print()
-    print(f"templates,{count('templates/*')}")
-    print(f"total_skills,{count('skills/**/SKILL.md')}")
-    print(f"total_agents,{count('agents/**/*.yaml')}")
-    print(f"total_workflows,{count('workflows/**/*.md')}")
-    print(f"total_evals,{count('evals/**/*.md')}")
+    print(f"templates,{sum(1 for _ in iter_files(ROOT / 'templates'))}")
+    for kind, count in totals.items():
+        print(f"total_{kind},{count}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

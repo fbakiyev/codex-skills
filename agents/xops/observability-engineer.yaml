@@ -15,5 +15,6 @@ collaborates_with:
   - platform-architect
   - security-architect
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

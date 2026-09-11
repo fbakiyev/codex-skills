@@ -17,11 +17,11 @@ Use for backend, frontend, API, database, performance, or fullstack implementati
 3. Update contracts and tests.
 4. Run validation.
 5. Review findings and fix blockers.
-6. Write handoff.
+6. Summarize validation and remaining risks; write a handoff when work is transferred or a durable handoff is requested.
 
 ## Outputs
 
 - changed implementation
 - updated tests/contracts
 - validation result
-- handoff
+- handoff when work is transferred or a durable handoff is requested

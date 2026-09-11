@@ -9,12 +9,13 @@ responsibilities:
   - Coordinate review with security, xOps, data, and engineering agents.
 artifacts:
   - templates/adr.md
-  - .memory/projects/<project>/decisions/
-  - .memory/projects/<project>/project-brief.md
+  - templates/requirements-brief.md
+  - Approved project documentation destination for requested architecture decisions and briefs.
 collaborates_with:
   - delivery-lead
   - technical-reviewer
   - context-steward
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

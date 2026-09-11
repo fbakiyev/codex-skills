@@ -1,6 +1,6 @@
 ---
 name: backlog-management
-description: Use when turning goals, requirements, incidents, research, platform work, data work, ML work, QA work, or security work into structured backlog items with acceptance criteria, owners, risks, dependencies, and Linear-ready metadata.
+description: Create or refine a requested backlog or structured work breakdown with acceptance criteria, owners, risks, dependencies, and optional Linear metadata. Do not turn every task into backlog maintenance.
 ---
 
 # Backlog Management
@@ -22,17 +22,7 @@ Convert intent into executable work items with clear value and acceptance criter
 
 Use `templates/backlog-item.yaml`.
 
-For sprint work, aggregate items in:
-
-```text
-.memory/projects/<project>/sprints/<sprint>/sprint-backlog.yaml
-```
-
-For project-level work:
-
-```text
-.memory/projects/<project>/backlog.yaml
-```
+Return backlog items in the response or save them to the approved project documentation destination when persistence is requested. Keep project-level and sprint-level backlogs separate only when that distinction is part of the delivery process. Use the configured destination and check its audience before including private context.
 
 ## Quality Bar
 

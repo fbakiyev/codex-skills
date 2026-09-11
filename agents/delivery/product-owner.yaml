@@ -6,16 +6,17 @@ responsibilities:
   - Convert goals into value-driven backlog items.
   - Prioritize work by outcome, risk, and dependency.
   - Maintain acceptance criteria.
-  - Decide what is in and out of scope for a sprint.
+  - Define what is in and out of the requested delivery scope, including a sprint when applicable.
 artifacts:
   - templates/backlog-item.yaml
   - templates/requirements-brief.md
-  - .memory/projects/<project>/backlog.yaml
+  - Requested project backlog in an approved project documentation destination.
 collaborates_with:
   - business-analyst
   - project-manager
   - scrum-master
   - delivery-lead
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

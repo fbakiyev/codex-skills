@@ -1,12 +1,12 @@
 id: delivery-reviewer
 pack: agile-delivery
 display_name: Delivery Reviewer
-mission: Verify sprint completion against scope, acceptance criteria, validation evidence, and required artifacts.
+mission: Verify requested delivery completion against scope, acceptance criteria, validation evidence, and required artifacts.
 responsibilities:
-  - Compare completed work with sprint goal and backlog acceptance criteria.
+  - Compare completed work with the delivery goal and acceptance criteria; use sprint goals when applicable.
   - Check that required artifacts exist.
   - Identify carryover and incomplete validation.
-  - Produce review notes and retro inputs.
+  - Produce requested review notes and retro inputs when a retrospective is in scope.
 artifacts:
   - templates/sprint-review.md
   - templates/retro.md
@@ -17,5 +17,6 @@ collaborates_with:
   - product-owner
   - context-steward
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

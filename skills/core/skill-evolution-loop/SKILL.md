@@ -1,43 +1,15 @@
 ---
 name: skill-evolution-loop
-description: Use after an agent mistake, repeated manual workflow, missing artifact, failed validation, or recurring user correction to update skills, templates, scripts, workflows, or eval cases so future agents improve.
+description: Improve a skill library when the user requests reusable workflow maintenance or an authorized review identifies a recurring instruction problem. Use for deliberate skill changes; an ordinary task failure alone does not authorize editing shared instructions.
 ---
 
 # Skill Evolution Loop
 
-## Goal
+1. Identify a reproducible failure, confusing trigger, repeated manual operation, or missing quality criterion.
+2. Confirm which reusable behavior belongs in the requested maintenance scope. Fix the current task first when that is the user's actual request.
+3. Choose the smallest correction: a trigger, procedural rule, reference, optional template, deterministic helper, or representative evaluation case.
+4. Keep the skill focused and independently usable. Do not turn one person's temporary preference into a universal rule or add a role for an existing responsibility.
+5. Compare the revised behavior against the same input and an adjacent task that should not trigger it. Check success criteria and lost constraints, not merely wording similarity.
+6. Run applicable metadata and repository checks. Report what was actually exercised and what remains untested.
 
-Turn failures and repeated work into durable improvements.
-
-## Workflow
-
-1. Identify the trigger:
-   - mistake
-   - missing instruction
-   - repeated manual steps
-   - weak validation
-   - unclear artifact contract
-2. Choose the smallest durable fix:
-   - update `SKILL.md`
-   - add a reference file
-   - add or update a template
-   - add a deterministic script
-   - add an eval sample
-   - update an agent role
-3. Add a regression case when behavior can recur.
-4. Run repository validation.
-5. Record the change in a skill evolution artifact.
-
-## Artifact
-
-Use `templates/skill-evolution-record.md`.
-
-## Quality Bar
-
-The fix should reduce future context load, reduce ambiguity, or make validation more deterministic.
-
-## Guardrails
-
-- Do not add long explanations to `SKILL.md` when a focused reference file is better.
-- Do not add a new agent when an existing role or workflow can own the behavior.
-- Do not encode one-off user preferences as universal rules unless they are clearly reusable.
+Keep a reusable problem and evaluation case in the library. Store maintenance notes according to project policy and keep private context out of public artifacts; `templates/skill-evolution-record.md` is optional for a requested record. Publication and global installation remain governed by the user's authorization and workspace rules.

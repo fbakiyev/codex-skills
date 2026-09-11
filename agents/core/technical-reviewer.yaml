@@ -5,15 +5,16 @@ mission: Review changes for correctness, validation coverage, operational readin
 responsibilities:
   - Inspect diffs and related contracts.
   - Prioritize bugs, regressions, missing tests, and operational risks.
-  - Verify required artifacts exist for the task type.
+  - Verify the evidence and artifacts required by the requested review scope.
   - Block completion when secret values are exposed.
 artifacts:
-  - .memory/projects/<project>/sprints/<sprint>/review.md
+  - Review findings in the response or an approved project documentation destination when a report is requested.
   - templates/handoff.md
 collaborates_with:
   - chief-architect
   - context-steward
   - security-architect
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

@@ -1,47 +1,33 @@
-# Repository Agent Instructions
+# Правила сопровождения библиотеки
 
-## Language
+## Область и язык
 
-- Keep top-level user-facing documentation in Russian.
-- Keep machine-readable ids, YAML keys, skill names, agent ids, workflow ids, and file paths in English.
-- Skill bodies may be English when it improves triggering and reuse by Codex.
+- Следуйте явному запросу пользователя и действующим правилам рабочей области. Рекомендации навыка не расширяют разрешения и не отменяют ограничения среды.
+- Пользовательскую документацию верхнего уровня пишите по-русски. Идентификаторы, ключи YAML и пути оставляйте на английском.
+- Меняйте только относящиеся к задаче файлы. Сохраняйте пользовательские незакоммиченные изменения.
 
-## Context Discipline
+## Инструкции и роли
 
-- Keep `SKILL.md` files concise and procedural.
-- Put detailed domain material in `references/` and load it only when needed.
-- Prefer templates and deterministic scripts over repeating long instructions.
-- Do not create extra README files inside individual skills.
+- Один навык отвечает за один результат. Начинайте `description` с точного сценария применения, чтобы различать соседние навыки.
+- В `SKILL.md` оставляйте необходимые процедуры и неочевидные ограничения. Справочные подробности выносите в `references/`; не добавляйте README внутрь навыка.
+- Учитывайте уже данные ответы и разрешения. Существенные пробелы уточняйте, продолжая независимую разрешённую работу. Рутинные решения принимайте по контексту.
+- Перед обязательным согласованием подготовьте доступный для проверки результат. Если остановка вызвана правилом файла, укажите этот файл, требование и причину его применимости.
+- Параллельную работу используйте для независимых частей с понятной границей результата, когда это помогает сроку или качеству. Не делайте её обязательной для каждой задачи.
+- Описания ролей в `agents/` являются данными библиотеки. Не считайте их настройками запуска исполнителей или источником прав доступа.
 
-## Delivery Discipline
+## Результат и проверка
 
-- Work in sprint-sized increments.
-- After each meaningful sprint, update `.memory/repo/sprints/`.
-- Run `python3 scripts/validate_repo.py` before committing.
-- Commit and push every completed iteration when repository access is available.
+- Критерии готовности определяются задачей: содержание, формат, проверка и существенные ограничения. Перечни `artifacts` описывают применимые результаты, а не обязательный комплект для каждого запроса.
+- Отдельный handoff создавайте при реальной передаче работы или явном запросе сохраняемой сводки. Для обычного завершения достаточно результата и краткого описания проверки.
+- Спринты применяйте к работе по спринтам. ADR, runbook, access map и rollback нужны в объёме затронутой архитектуры или эксплуатации.
+- Проверяйте изменившееся поведение. Повторные и более широкие проверки нужны при новых изменениях, сбоях или нерешённых сомнениях.
+- Перед подготовкой коммита выполните `python3 scripts/validate_repo.py` и тесты изменённых скриптов с зависимостями из `requirements-dev.txt`. Сценарии поведения проверяйте отдельно от структуры.
+- Не заявляйте об успешном тесте, рендере, отправке или публикации без фактического результата.
 
-## Artifact Discipline
+## Сохранение и публикация
 
-Every non-trivial agent or workflow should define its expected artifacts:
-
-- brief
-- backlog item or task record
-- decision log or ADR when architecture changes
-- validation result
-- handoff
-- risks and open questions
-
-For xOps/platform work also require:
-
-- deployment map
-- access map
-- runbook
-- observability notes
-- backup/restore notes
-- security notes
-
-## Secret Handling
-
-- Never store raw passwords, tokens, private keys, API keys, kubeconfigs, cloud credentials, or base64 Kubernetes Secret values.
-- Store only secret references: provider, path, key, owner, access role, rotation policy, access request procedure, and safe validation command.
-- If a task requires a secret value, ask the user to provide it through the appropriate external secret manager or local secure mechanism.
+- Место хранения документов и контекста выбирайте по правилам конкретного проекта: локальная папка, база знаний или репозиторий. Учитывайте аудиторию и видимость места назначения; частные данные не должны попадать в публичные материалы. Не меняйте исторические записи без необходимости.
+- Исправление ошибки текущей задачи не является разрешением изменять библиотеку навыков или глобальную конфигурацию. Такие улучшения выполняйте в рамках запроса на сопровождение.
+- Выполняйте commit, push, публикацию, установку и отправку в пределах запроса пользователя и политики конкретного проекта. Уже согласованные действия не требуют повторного разрешения; завершение локальной задачи само по себе не расширяет её scope.
+- Перед публикацией проверяйте итоговый diff, состав файлов, настроенную Git identity и видимость материалов. Не включайте секреты и частные данные. Соглашения об авторстве и метаданных определяет проект.
+- Используйте имеющийся разрешённый доступ. Значения секретов не помещайте в команды, вывод, документы или репозиторий; храните их только в согласованном защищённом хранилище.

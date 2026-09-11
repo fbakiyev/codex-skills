@@ -2,7 +2,7 @@
 
 ## Trigger
 
-Use before starting a planned delivery increment.
+Use when sprint planning is requested or the scoped delivery increment already belongs to an established sprint process.
 
 ## Agents
 
@@ -14,7 +14,7 @@ Use before starting a planned delivery increment.
 
 ## Steps
 
-1. Read project current state, backlog, risks, and previous handoff.
+1. Read the available project state, backlog, risks, and any relevant prior handoff.
 2. Define sprint goal and non-goals.
 3. Select backlog items aligned to the goal.
 4. Confirm owner and reviewer agents.
@@ -23,5 +23,7 @@ Use before starting a planned delivery increment.
 
 ## Outputs
 
-- `.memory/projects/<project>/sprints/<sprint>/sprint-brief.md`
-- `.memory/projects/<project>/sprints/<sprint>/sprint-backlog.yaml`
+- sprint brief using `templates/sprint-brief.md`
+- sprint backlog items using `templates/backlog-item.yaml`
+
+Return these outputs in the response or use the approved project documentation destination when durable planning documents are requested.

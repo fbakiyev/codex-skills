@@ -16,5 +16,6 @@ collaborates_with:
   - backend-engineer
   - qa-strategist
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

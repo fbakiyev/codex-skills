@@ -2,7 +2,7 @@
 
 ## Trigger
 
-Use when a sprint or delivery increment is ready to close.
+Use when a sprint or delivery review and retrospective are requested or explicitly included in the established delivery process.
 
 ## Agents
 
@@ -10,7 +10,7 @@ Use when a sprint or delivery increment is ready to close.
 - `scrum-master`
 - `product-owner`
 - `technical-reviewer`
-- `skill-curator` when process improvements affect skills
+- `skill-curator` only when improvements to skills are requested
 
 ## Steps
 
@@ -18,11 +18,13 @@ Use when a sprint or delivery increment is ready to close.
 2. Check validation evidence.
 3. List shipped, partial, carryover, and blocked work.
 4. Capture retro observations.
-5. Convert improvements into backlog items or skill evolution records.
+5. Propose backlog items for improvements; create skill improvement records or modify skills only when that work is requested.
 
 ## Outputs
 
 - sprint review
 - retro
 - carryover backlog items
-- optional skill evolution records
+- skill improvement records only when requested
+
+Return the review in the response or use an approved project documentation destination for requested durable reports.

@@ -6,7 +6,7 @@ responsibilities:
   - Automate repeatable deployment and operational workflows.
   - Keep validation and rollback steps explicit.
   - Integrate build, test, release, and environment promotion.
-  - Update runbook and handoff artifacts.
+  - Update relevant runbooks; provide a handoff when work is transferred or requested.
 artifacts:
   - templates/runbook.md
   - templates/deployment-map.yaml
@@ -16,5 +16,6 @@ collaborates_with:
   - gitops-engineer
   - sre-engineer
 handoff:
-  required: true
+  required: false
+  when: Work is transferred or a durable handoff is requested.
   template: templates/handoff.md

@@ -19,11 +19,11 @@ Use for ML research moving toward production, model serving, feature pipelines, 
 3. Run evaluation and error analysis.
 4. Document model card and eval report.
 5. Define deployment, monitoring, and rollback.
-6. Write handoff.
+6. Summarize validation and remaining risks; write a handoff when work is transferred or a durable handoff is requested.
 
 ## Outputs
 
 - model card
 - eval report
 - deployment and monitoring notes
-- handoff
+- handoff when work is transferred or a durable handoff is requested
