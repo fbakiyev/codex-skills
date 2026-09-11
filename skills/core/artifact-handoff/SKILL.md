@@ -1,16 +1,16 @@
 ---
 name: artifact-handoff
-description: Prepare a resumable handoff when work is being transferred or a durable completion record is requested. Capture verified state, decisions, blockers, and next actions; ordinary task completion alone does not require a handoff document.
+description: "Подготовка сводки, по которой другой человек сможет продолжить работу, когда требуется передача или сохраняемая запись о завершении. Зафиксируйте проверенное состояние, решения, препятствия и следующие действия; обычное завершение задачи само по себе не требует отдельного документа."
 ---
 
-# Artifact Handoff
+# Передача работы
 
-1. Establish what the receiving person needs to continue and where the record belongs. Reuse an already approved destination.
-2. Read the relevant deliverables and verification results. Separate completed work from attempted, pending, or unavailable work.
-3. Include exact relevant commands or queries and outcomes. For time-dependent diagnosis, include source, observation window, timezone, and coverage limits.
-4. State consequential decisions, blockers, material risks, and concrete next actions. Link authoritative artifacts instead of duplicating them.
-5. Deliver the handoff in the requested format. If no persistent destination is agreed, provide it in the response while continuing any independent authorized work.
+1. Определите, что получателю нужно для продолжения и где хранить сводку. Используйте уже согласованное место.
+2. Изучите относящиеся к задаче результаты и проверки. Разделяйте завершённую работу, попытки, ожидающие действия и недоступные проверки.
+3. Укажите точные существенные команды или запросы и их результаты. Для диагностики, зависящей от времени, добавьте источник, окно наблюдения, часовой пояс и границы охвата.
+4. Зафиксируйте значимые решения, препятствия, существенные риски и конкретные следующие действия. Дайте ссылки на достоверные исходные материалы, не дублируя их.
+5. Подготовьте сводку в запрошенном формате. Если место постоянного хранения не согласовано, приведите её в ответе и продолжайте независимую разрешённую работу.
 
-The record needs only context, completed work, validation, decisions, blockers, artifact links, and next actions that actually matter. Omit empty sections. `templates/handoff.md` is optional when this repository is available.
+Включайте только нужные для продолжения сведения: контекст, выполненную работу, проверки, решения, препятствия, ссылки и следующие действия. Пустые разделы пропускайте. При доступной копии репозитория можно использовать необязательный `templates/handoff.md`.
 
-Store continuity notes and project handover documents in the destination chosen by the user or project. Check its audience and visibility before including private context. Never include secret values or invent a successful check.
+Храните заметки для продолжения и документы передачи там, где определил пользователь или проект. Перед включением частного контекста проверяйте аудиторию и видимость. Не записывайте значения секретов и не выдумывайте успешные проверки.

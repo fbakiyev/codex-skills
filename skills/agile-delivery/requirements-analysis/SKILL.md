@@ -1,27 +1,21 @@
 ---
 name: requirements-analysis
-description: Use when eliciting and structuring business requirements, user stories, stakeholder goals, acceptance criteria, non-functional requirements, and delivery constraints before implementation.
+description: "Уточнение неоднозначной функции или бизнес-изменения до проверяемых требований, границ и нерешённых вопросов. Применяйте перед проектированием решения, когда нужное поведение неясно; не требуйте отдельного исследования для уже определённой небольшой правки."
 ---
 
-# Requirements Analysis
+# Анализ требований
 
-## Goal
+Начните с нужного пользователю решения или поведения, затронутых пользователей, доступных фактов и ограничений. Сохраняйте связь утверждений заинтересованных сторон с источниками; предложенный способ реализации не становится автоматически требованием.
 
-Turn ambiguous business intent into testable delivery scope.
+## Существенные решения
 
-## Workflow
+- Отделяйте подтверждённые требования, предположения, предложения и открытые решения. При согласовании противоречащих запросов сохраняйте условия и исключения; укажите, кто может разрешить противоречие.
+- Преобразуйте слова «быстро», «безопасно» или «удобно» в наблюдаемые примеры приёмки. Не выдумывайте целевую задержку, юридическую обязанность, бюджет, ответственного или срок. Если порог не задан, обозначьте пробел и опишите известное поведение.
+- Опишите, кто может выполнить действие, над какими объектами и при каких условиях. Включите существенный отказ в доступе или сбой, а не только успешный сценарий.
+- Явно отмечайте изменение объёма задачи. Запрос на уточнение функции не разрешает выбирать поставщиков, создавать пункты трекера или реализовывать решение.
 
-1. Identify stakeholders, users, business value, constraints, and assumptions.
-2. Separate business requirements from solution design.
-3. Capture user stories or job stories when useful.
-4. Define acceptance criteria and non-functional requirements.
-5. Highlight open questions and decision points.
-6. Feed ready items into backlog management.
+## Результат и проверка
 
-## Artifact
+Верните требуемое поведение, примеры приёмки, ограничения, исключения и оставшиеся решения. Используйте пользовательские истории или бэклог, только если формат помогает получить запрошенный результат. `templates/requirements-brief.md` необязателен при доступном репозитории.
 
-Use `templates/requirements-brief.md`.
-
-## Quality Bar
-
-Requirements are good enough when implementation, QA, and review agents can independently tell whether the work is correct.
+Проверьте, что каждый пример приёмки можно оценить независимо и связать с требованием. Если выбор блокирует реализацию, объясните альтернативы и их последствия; продолжайте части, не зависящие от этого выбора.

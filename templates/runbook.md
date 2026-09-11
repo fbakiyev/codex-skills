@@ -1,35 +1,35 @@
-# Runbook
+# Инструкция эксплуатации
 
-## Service
+## Сервис
 
-- Name:
-- Environment:
-- Owners:
+- Название:
+- Среда:
+- Ответственные:
 
-## Entry Points
-
--
-
-## Health Checks
+## Точки входа
 
 -
 
-## Common Operations
+## Проверки работоспособности
 
 -
 
-## Incident Response
+## Типовые операции
 
 -
 
-## Rollback
+## Реагирование на инцидент
 
 -
 
-## Backup And Restore
+## Откат
 
 -
 
-## Access And Secrets
+## Резервное копирование и восстановление
 
-Reference `access-map.yaml`. Do not duplicate secret values here.
+-
+
+## Доступы и секреты
+
+Ссылайтесь на `access-map.yaml`. Не дублируйте здесь значения секретов.

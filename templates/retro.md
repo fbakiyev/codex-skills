@@ -1,21 +1,21 @@
-# Retrospective
+# Ретроспектива
 
-## Worked Well
-
--
-
-## Did Not Work
+## Что сработало
 
 -
 
-## Improvements
+## Что не сработало
 
 -
 
-## Skill Or Workflow Updates
+## Улучшения
 
 -
 
-## Action Items
+## Обновления навыков или процессов
+
+-
+
+## Действия
 
 -

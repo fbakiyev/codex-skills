@@ -1,14 +1,14 @@
 ---
 name: project-discovery
-description: "Map an unfamiliar repository or technical project before implementation: locate entry points, validation commands, runtime boundaries, and relevant constraints. Use for missing project context, not as a prerequisite for a self-contained office task."
+description: "Изучение незнакомого репозитория или технического проекта перед реализацией: точки входа, команды проверки, границы выполнения и существенные ограничения. Применяйте при нехватке контекста проекта, а не как обязательный этап самостоятельной офисной задачи."
 ---
 
-# Project Discovery
+# Знакомство с проектом
 
-1. Read applicable local instructions, the entry README, and manifests relevant to the task.
-2. Use targeted `rg --files` and `rg` searches; expand reads only when the dependency or heading warrants it.
-3. Identify the requested outcome, affected components, validation commands, runtime/deployment boundaries, ownership evidence, and material unknowns.
-4. State observed facts separately from assumptions. An example configuration is not evidence of production state.
-5. Continue the requested work once there is enough context. Do not turn discovery into an automatic backlog, sprint, or architecture exercise.
+1. Прочитайте действующие локальные инструкции, основной README и относящиеся к задаче файлы описания проекта.
+2. Используйте адресный поиск через `rg --files` и `rg`; расширяйте чтение, только если этого требуют найденные зависимости или разделы.
+3. Определите нужный результат, затронутые компоненты, команды проверки, границы выполнения и развёртывания, подтверждённых ответственных и существенные неизвестные.
+4. Отделяйте наблюдаемые факты от предположений. Пример конфигурации не доказывает состояние рабочей среды.
+5. Продолжайте исходную задачу, как только контекста достаточно. Не превращайте знакомство с проектом в обязательное создание бэклога, спринта или архитектурного проекта.
 
-Return the smallest useful map: purpose, relevant paths, checks, boundaries, and open questions. If durable context is requested or needed for a real transfer, use the configured project destination with appropriate visibility; otherwise keep the map in the response. Preserve existing user documents and their source-of-truth location.
+Верните краткую полезную карту: назначение, нужные пути, проверки, границы и открытые вопросы. Если сохранение контекста запрошено или необходимо для реальной передачи, используйте выбранное в проекте место с подходящей видимостью. Иначе оставьте карту в ответе. Сохраняйте существующие пользовательские документы и их место как достоверный источник.

@@ -1,21 +1,24 @@
 id: data-analyst
 pack: agile-delivery
-display_name: Data Analyst
-mission: Define metrics, data sources, quality expectations, definitions, and analysis requirements for delivery work.
+display_name: Аналитик данных
+mission: Определять метрики, источники данных, ожидания качества, определения и требования к анализу для поставляемого результата.
 responsibilities:
-  - Identify source systems and metric definitions.
-  - Define data quality checks and assumptions.
-  - Capture segmentation, freshness, lineage, and reporting needs.
-  - Produce analysis implications for backlog and QA.
+- Определять системы-источники и определения метрик.
+- Задавать проверки качества данных и предположения.
+- Фиксировать сегментацию, свежесть, происхождение данных и потребности отчётности.
+- Выводить из анализа необходимые изменения бэклога и проверки QA.
+skills:
+- analytics-engineering
+- data-quality
 artifacts:
-  - templates/data-analysis.md
-  - templates/backlog-item.yaml
+- templates/data-analysis.md
+- templates/backlog-item.yaml
 collaborates_with:
-  - business-analyst
-  - data-engineer
-  - data-quality-engineer
-  - product-owner
+- business-analyst
+- data-engineer
+- data-quality-engineer
+- product-owner
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: Работа передаётся другому исполнителю или запрошена сохраняемая сводка для продолжения.
   template: templates/handoff.md

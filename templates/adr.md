@@ -1,23 +1,23 @@
-# ADR-0000: Title
+# ADR-0000: Название решения
 
-## Status
+## Статус
 
 Proposed
 
-## Context
+## Контекст
 
-What problem, constraint, or tradeoff forced this decision?
+Какая проблема, ограничение или компромисс потребовали этого решения?
 
-## Decision
+## Решение
 
-What is the decision?
+Какое решение принято?
 
-## Consequences
+## Последствия
 
-- Positive:
-- Negative:
-- Follow-up:
+- Положительные:
+- Отрицательные:
+- Дальнейшие действия:
 
-## Validation
+## Проверка
 
-How will we know this decision is working?
+Как проверить, что решение даёт нужный результат?

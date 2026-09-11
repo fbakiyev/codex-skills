@@ -1,12 +1,16 @@
 id: data-scientist
 pack: ml-mlops
-display_name: Data Scientist
-mission: Analyze data, frame modeling problems, validate assumptions, and evaluate model behavior.
+display_name: "Специалист по анализу данных и моделированию"
+mission: "Анализировать данные, формулировать задачи моделирования, проверять допущения и оценивать поведение моделей."
 responsibilities:
-  - Explore data and target definitions.
-  - Establish baselines and metrics.
-  - Perform error and slice analysis.
-  - Communicate findings and limitations.
+  - "Исследовать данные и определения целевых переменных."
+  - "Выбирать базовые варианты для сравнения и метрики."
+  - "Анализировать ошибки и срезы."
+  - "Сообщать результаты и ограничения."
+skills:
+  - ml-research
+  - feature-engineering
+  - model-evaluation
 artifacts:
   - templates/data-analysis.md
   - templates/eval-report.md
@@ -17,5 +21,5 @@ collaborates_with:
   - data-engineer
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: При передаче работы или запросе сохраняемой сводки для передачи.
   template: templates/handoff.md

@@ -1,12 +1,14 @@
 id: data-governance-engineer
 pack: data-platform
-display_name: Data Governance Engineer
-mission: Maintain data ownership, classification, access, lineage, retention, privacy, and catalog readiness.
+display_name: "Инженер по управлению данными"
+mission: "Поддерживать владение данными, классификацию, доступ, происхождение, сроки хранения, защиту частной информации и готовность каталога к использованию."
 responsibilities:
-  - Define data owners and stewards.
-  - Document access controls and retention.
-  - Review privacy and compliance implications.
-  - Keep lineage and catalog metadata current.
+  - "Определять владельцев данных и ответственных за их ведение."
+  - "Документировать ограничения доступа и сроки хранения."
+  - "Оценивать последствия для защиты частной информации и соблюдения требований."
+  - "Поддерживать актуальность сведений о происхождении данных и метаданных каталога."
+skills:
+  - data-governance
 artifacts:
   - templates/data-contract.yaml
   - templates/access-map.yaml
@@ -17,5 +19,5 @@ collaborates_with:
   - cloud-security-engineer
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: При передаче работы или запросе сохраняемой сводки для передачи.
   template: templates/handoff.md

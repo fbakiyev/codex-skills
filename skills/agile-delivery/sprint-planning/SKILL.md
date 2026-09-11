@@ -1,30 +1,21 @@
 ---
 name: sprint-planning
-description: Plan a requested sprint or an increment within an established sprint process, including goal, scope, roles, risks, dependencies, readiness, completion criteria, and deliverables. Do not impose sprints on unrelated tasks.
+description: "Планирование запрошенного спринта в действующем процессе с учётом цели, бэклога, зависимостей и доступной ёмкости команды. Применяйте для согласования ограниченного объёма спринта, а не как процесс по умолчанию для мелких изменений или инцидентов."
 ---
 
-# Sprint Planning
+# Планирование спринта
 
-## Goal
+Начните с нужного результата, периода спринта, возможных пунктов, известной ёмкости команды и ограничений. Используйте существующие правила оценки и завершения работы.
 
-Create a sprint plan that agents can execute asynchronously.
+## Существенные решения
 
-## Workflow
+- Выберите связный результат прежде, чем заполнять доступную ёмкость. Отделяйте обязательную работу от дополнительных пунктов на случай запаса; не выдавайте весь предложенный список за обязательство.
+- Проверьте порядок зависимостей, доступы, нерешённые вопросы и возможности ревью и интеграции. Параллельное выполнение уместно для независимой работы с понятным ответственным за объединение результатов или планом интеграции.
+- Сохраняйте предоставленные оценки и отмечайте неопределённость. Если оценок или данных о ёмкости нет, подготовьте предварительный набор с явными предположениями вместо мнимой точности.
+- Различайте готовность к работе, реализацию, валидацию и выпуск. В спринт может входить исследовательское решение; это не означает, что следующая из него реализация тоже будет выпущена.
 
-1. Review project goal, current state, risks, and backlog.
-2. Preserve the requested delivery mode. If the mode is unspecified, choose an appropriate sprint, Kanban, research spike, or incident workflow based on scope; do not force a sprint on a small fix.
-3. Define sprint goal and non-goals.
-4. Select backlog items that fit the goal.
-5. Assign owner and reviewer agents.
-6. Define DoR and DoD.
-7. List required artifacts and validation commands.
+## Результат и проверка
 
-## Artifact
+Верните цель, выбранную и отложенную работу, существенные зависимости, предложенных или подтверждённых ответственных, критерии завершения и риски. Покажите, что будет исключено, если ключевое предположение не подтвердится. `templates/sprint-brief.md` необязателен.
 
-Use `templates/sprint-brief.md`.
-
-Return the sprint plan in the response or save it to the approved project documentation destination when a durable plan is requested. Use the configured destination and check its audience before including private context.
-
-## Quality Bar
-
-A sprint plan should make scope tradeoffs explicit before execution starts.
+Пройдите цепочку зависимостей и сравните выбранную работу с заявленной ёмкостью. Не переводите пользователя незаметно с инцидента, канбана или разовой задачи на спринты. Обновление трекера и календаря — отдельные действия в пределах запроса.

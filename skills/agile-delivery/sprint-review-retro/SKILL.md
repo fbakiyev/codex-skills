@@ -1,32 +1,21 @@
 ---
 name: sprint-review-retro
-description: Conduct a requested sprint or delivery review and retrospective using completion evidence, acceptance criteria, stakeholder notes, and process improvements. Do not launch a retrospective or modify skills after every completed task.
+description: "Проведение запрошенного обзора спринта или поставки и ретроспективы по исходной цели, подтверждениям приёмки и наблюдаемым проблемам процесса. Не запускайте ретроспективу и не меняйте общие навыки после каждой завершённой задачи."
 ---
 
-# Sprint Review And Retro
+# Обзор спринта и ретроспектива
 
-## Goal
+Используйте согласованные цель и объём, готовые материалы, результаты проверок и существенную обратную связь. Отделяйте оценку полученных результатов от предложений улучшить процесс.
 
-Close the sprint with evidence, not vibes.
+## Существенные решения
 
-## Workflow
+- Оцените каждый обещанный результат по критериям приёмки. Различайте реализованную, проверенную, выпущенную и принятую работу; затраченные усилия или впечатляющая демонстрация сами по себе не доказывают завершение.
+- Точно фиксируйте частично выполненную работу и оставшиеся критерии. Переносите незавершённый результат и его зависимости, не создавая дубликат пункта и не объявляя весь пункт готовым.
+- Отделяйте наблюдения от предлагаемых причин. Одна задержка не доказывает системную ошибку процесса; укажите, чем можно проверить объяснение.
+- Предпочитайте небольшое улучшение с наблюдаемым результатом общему новому ритуалу. Оставляйте ответственного и срок открытыми, если они не согласованы; не выдумывайте обязательства ради заполнения шаблона.
 
-1. Compare completed work against sprint goal and acceptance criteria.
-2. Collect validation results and changed artifacts.
-3. Record what shipped, what did not, and why.
-4. Identify process, skill, template, or workflow improvements.
-5. Propose backlog items for recurring issues; create skill improvement records or change skills only when that improvement work is requested.
+## Результат и проверка
 
-## Artifacts
+Верните полученные результаты и подтверждения, незавершённый объём, существенную обратную связь и предложения по улучшению. Явно отметьте важные изменения объёма. `templates/sprint-review.md` и `templates/retro.md` необязательны; используйте только запрошенные части.
 
-- `templates/sprint-review.md`
-- `templates/retro.md`
-- `templates/skill-evolution-record.md` only for requested skill improvements
-
-Return the review in the response or use the approved project documentation destination for requested durable reports. Save any needed continuity notes according to project policy and the destination's audience.
-
-## Guardrails
-
-- Do not call a sprint complete when DoD is not met; mark it partial and list carryover.
-- Do not bury failed validation.
-- Do not create retro action items without owners.
+Проверьте, что утверждения о завершении следуют из фактов, а предложения отличимы от решений. Изменения общих навыков, трекера или командных правил должны входить в соответствующую задачу. Сохраняйте исторические записи и выбранное проектом место документов.

@@ -1,12 +1,14 @@
 id: backend-engineer
 pack: software-engineering
-display_name: Backend Engineer
-mission: Implement and review server-side behavior, APIs, jobs, integrations, persistence, and reliability paths.
+display_name: "Backend-инженер"
+mission: "Реализовывать и проверять серверное поведение, API, фоновые задания, интеграции, сохранение данных и сценарии надёжности."
 responsibilities:
-  - Follow existing backend patterns.
-  - Add tests for changed behavior.
-  - Document API or data contract changes.
-  - Report validation and remaining risks; provide a handoff when work is transferred or requested.
+  - "Следовать существующим backend-решениям."
+  - "Добавлять тесты изменённого поведения."
+  - "Документировать изменения контрактов API или данных."
+  - "Сообщать результаты проверки и оставшиеся риски; передавать контекст при передаче работы или по запросу."
+skills:
+  - backend-engineering
 artifacts:
   - templates/api-contract.md
   - templates/handoff.md
@@ -16,5 +18,5 @@ collaborates_with:
   - qa-strategist
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: Передаётся работа или запрошена сохраняемая запись для её продолжения.
   template: templates/handoff.md

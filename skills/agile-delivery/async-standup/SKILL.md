@@ -1,38 +1,21 @@
 ---
 name: async-standup
-description: Prepare a requested asynchronous standup or a status update within an established sprint process, covering done, next, blockers, risks, and changed assumptions. Do not introduce sprint artifacts for an ordinary status question.
+description: "Подготовка запрошенного асинхронного стендапа или обновления статуса в действующем процессе спринтов. Покажите изменения со времени предыдущего обновления, подтверждения и препятствия; на обычный вопрос о статусе отвечайте прямо, без создания документов спринта."
 ---
 
-# Async Standup
+# Асинхронный статус
 
-## Goal
+Используйте относящиеся к задаче рабочие пункты, предыдущее обновление и доступные подтверждения. Если предыдущая точка отсчёта неизвестна, опишите текущее состояние, не выдумывая изменения.
 
-Maintain sprint visibility without chatty meeting simulation.
+## Существенные решения
 
-## Workflow
+- Различайте состояния «реализовано», «проверено на ревью», «прошло валидацию», «выпущено» и «принято». Открытое изменение или успешный модульный тест не доказывают развёртывание или пользовательскую приёмку.
+- Проверяйте свежесть наблюдений. Устаревший статус и более новая неуспешная проверка означают расхождение; не объединяйте их в уверенное сообщение об успехе.
+- Описывайте препятствие через затронутый результат и необходимое решение, доступ или зависимость. Не назначайте нового ответственного, срок или адресата эскалации без контекста.
+- Сохраняйте существенную неопределённость и неуспешные проверки, оставляя сообщение коротким. Не воспроизводите сырые журналы, постороннюю активность и чувствительные исходные данные.
 
-1. Read the available sprint brief, backlog, blockers, and relevant prior updates; do not create missing artifacts just to produce a status answer.
-2. Summarize:
-   - completed since last update
-   - next actions
-   - blockers
-   - risk changes
-   - artifact updates
-3. Escalate blockers to PM, PO, architect, or relevant domain agent.
-4. Return the standup update; persist it only when a durable update is requested or already part of the agreed process.
+## Результат и проверка
 
-## Artifact
+Покажите завершённые изменения, следующую работу, препятствия и существенное изменение рисков. По возможности дайте ссылки на подтверждающие материалы. Предлагаемые действия обозначайте как предложения, а не обязательства.
 
-Use `templates/standup-update.md`.
-
-Use the response or the approved project documentation destination for a requested team update. If durable context is needed, `<context-root>` is a placeholder for the configured destination. Check its audience and visibility before including private information:
-
-```text
-<context-root>/projects/<project>/sprints/<sprint>/standups/YYYY-MM-DD.md
-```
-
-## Guardrails
-
-- Do not invent progress.
-- Do not mark blockers as resolved without evidence.
-- Do not use standup as a substitute for a requested review or transfer of work.
+Проверьте, что каждое утверждение о прогрессе имеет источник и относится к периоду обновления. `templates/standup-update.md` необязателен. Сохраняйте или отправляйте статус, только если это запрошено либо уже входит в согласованный процесс; отсутствие шаблона не блокирует ответ.

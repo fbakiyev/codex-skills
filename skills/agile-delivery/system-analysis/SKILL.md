@@ -1,29 +1,21 @@
 ---
 name: system-analysis
-description: Use when translating requirements into system behavior, integration contracts, API flows, data movement, edge cases, sequence diagrams, state transitions, and implementation constraints.
+description: "Преобразование требований к функции или интеграции в границы систем, переходы состояний, контракты данных и поведение при сбоях. Применяйте, когда реализации нужна модель поведения; выяснение бизнес-цели относится к анализу требований."
 ---
 
-# System Analysis
+# Системный анализ
 
-## Goal
+Определите участвующие системы и стороны, достоверные данные и нужное изменение. Отделяйте наблюдаемое текущее поведение от предлагаемого контракта.
 
-Make system behavior explicit before design or implementation.
+## Существенные решения
 
-## Workflow
+- Определите идентичность объектов и ответственность на границах: ключи, уполномоченных участников, право менять состояние и систему, разрешающую конфликт. Копия поля не становится автоматически достоверным источником.
+- Опишите значимые и запрещённые переходы. Для внешних операций рассмотрите таймаут после успеха, повторную доставку, нарушение порядка событий и частичное завершение, если они влияют на процесс. Один успешный запрос не доказывает выполнение ровно один раз.
+- Укажите, как вызывающая сторона различает принятие запроса, завершение и отказ. Отделяйте транспортное подтверждение от бизнес-результата; выбирайте повтор, сверку состояния или компенсацию по смыслу операции.
+- При изменении данных или контрактов учитывайте старые читающие и записывающие компоненты во время перехода. Откат кода может не отменить миграцию данных или внешний побочный эффект.
 
-1. Identify actors, systems, boundaries, and source of truth.
-2. Describe main flows and failure flows.
-3. Define API, event, database, or file contracts.
-4. Capture edge cases and consistency assumptions.
-5. Identify observability, security, data quality, and rollback needs.
-6. Produce backlog-ready implementation and test implications.
+## Результат и проверка
 
-## Artifact
+Опишите основной и неуспешные сценарии, ответственность, существенные переходы состояний и конкретные примеры контрактов. Используйте диаграмму последовательности или схему, если она устраняет неоднозначность. Фиксируйте недостающие решения и последствия для реализации и тестов вместо скрытого выбора бизнес-правил.
 
-Use `templates/system-analysis.md`.
-
-## Guardrails
-
-- Do not confuse current behavior with desired behavior.
-- Do not skip failure paths for infrastructure, data, security, or payment-like flows.
-- Do not define contracts only in prose when schemas or examples are needed.
+Пройдите по модели хотя бы один успешный и существенный неуспешный сценарий. Проверьте согласованность состояния и наблюдаемого результата на каждой границе. `templates/system-analysis.md` необязателен при доступном репозитории; не требуйте отдельного документа, если достаточно запрошенного ответа.

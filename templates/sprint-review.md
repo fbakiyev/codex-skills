@@ -1,29 +1,29 @@
-# Sprint Review
+# Обзор спринта
 
-## Sprint Goal
-
--
-
-## Completed
+## Цель спринта
 
 -
 
-## Partially Completed
+## Завершено
 
 -
 
-## Not Completed
+## Частично завершено
 
 -
 
-## Validation Evidence
+## Не завершено
 
 -
 
-## Stakeholder Notes
+## Подтверждения проверок
 
 -
 
-## Carryover
+## Замечания заинтересованных сторон
+
+-
+
+## Переносимая работа
 
 -

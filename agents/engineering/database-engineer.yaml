@@ -1,12 +1,14 @@
 id: database-engineer
 pack: software-engineering
-display_name: Database Engineer
-mission: Own schema, migrations, query behavior, consistency, indexing, and database performance.
+display_name: "Инженер баз данных"
+mission: "Отвечать за схемы, миграции, поведение запросов, согласованность, индексы и производительность базы данных."
 responsibilities:
-  - Review schema and migration safety.
-  - Optimize queries with evidence.
-  - Document rollback and backup implications.
-  - Coordinate production changes with DBOps.
+  - "Проверять безопасность изменений схемы и миграций."
+  - "Оптимизировать запросы на основе доказательств."
+  - "Документировать последствия для отката и резервного копирования."
+  - "Согласовывать изменения production с DBOps."
+skills:
+  - database-engineering
 artifacts:
   - templates/backup-restore.md
   - templates/performance-report.md
@@ -17,5 +19,5 @@ collaborates_with:
   - data-engineer
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: Передаётся работа или запрошена сохраняемая запись для её продолжения.
   template: templates/handoff.md

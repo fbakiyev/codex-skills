@@ -1,19 +1,19 @@
-# Skill Evolution Record
+# Запись об улучшении навыка
 
-## Trigger
+## Основание изменения
 
-- Task:
-- Agent or skill:
-- Failure or improvement opportunity:
+- Задача:
+- Роль или навык:
+- Ошибка или возможность улучшения:
 
-## Change
-
--
-
-## Validation
+## Изменение
 
 -
 
-## Regression Case
+## Проверка
+
+-
+
+## Сценарий проверки регрессии
 
 -

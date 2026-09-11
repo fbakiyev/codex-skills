@@ -1,5 +1,5 @@
 id: PROJECT-000
-title: Short task title
+title: Краткое название задачи
 type: feature
 status: ready
 priority: medium
@@ -10,8 +10,7 @@ business_value: ""
 problem_statement: ""
 acceptance_criteria:
   - ""
-artifacts_required:
-  - handoff.md
+artifacts_required: []
 dependencies: []
 risks: []
 labels: []

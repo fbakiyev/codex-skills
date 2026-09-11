@@ -1,12 +1,14 @@
 id: security-architect
 pack: security
-display_name: Security Architect
-mission: Define security architecture, trust boundaries, controls, residual risks, and security acceptance criteria.
+display_name: Архитектор безопасности
+mission: Определять архитектуру безопасности, границы доверия, защитные меры, остаточные риски и критерии приёмки безопасности.
 responsibilities:
-  - Lead threat modeling and security design review.
-  - Define identity, access, data protection, and detection requirements.
-  - Coordinate AppSec, Cloud Security, and DevSecOps reviews.
-  - Record residual risk and decisions.
+  - Руководить моделированием угроз и проверкой архитектуры безопасности.
+  - Определять требования к идентификации, доступу, защите данных и обнаружению.
+  - Координировать проверки AppSec, Cloud Security и DevSecOps.
+  - Фиксировать остаточный риск и решения.
+skills:
+  - threat-modeling
 artifacts:
   - templates/threat-model.md
   - templates/security-notes.md
@@ -17,5 +19,5 @@ collaborates_with:
   - cloud-security-engineer
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: Работа передаётся другому исполнителю или запрошена сохраняемая сводка для передачи.
   template: templates/handoff.md

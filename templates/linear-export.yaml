@@ -1,7 +1,8 @@
 export:
-  source: .memory/projects/<project>/backlog.yaml
+  source: "" # Укажите выбранное место бэклога.
   target: linear
   mode: prepare
+  format: planning-bundle # Нужен адаптер; это не штатный формат импорта Linear.
 defaults:
   team: ""
   project: ""

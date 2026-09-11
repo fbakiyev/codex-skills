@@ -1,34 +1,18 @@
-# Workflow: xOps Platform Delivery
+# Процесс: поставка платформы xOps
 
-## Trigger
+## Когда применять и какие роли нужны
 
-Use for platform, infrastructure, GitOps, cloud, cluster, observability, database, data platform, or ML platform delivery.
+Используй для поставки определённой возможности платформы или инфраструктуры. Выбери нужного исполнителя и владельца. Подключай архитектурную проверку, проверку надёжности или безопасности там, где этого требует фактическое изменение. Небольшая эксплуатационная правка не требует всех платформенных ролей.
 
-## Agents
+## Шаги
 
-- `platform-architect`
-- `devops-engineer`
-- `sre-engineer`
-- `devsecops-engineer`
-- relevant specialized xOps agents
+1. Установи результат для потребителя, целевую среду, источник истины и ответственного за эксплуатацию. Используй `xops-platform-design` для нерешённых существенных проектных вопросов, а не как обязательный ритуал при уже определённом изменении.
+2. Подготовь IaC с помощью `infrastructure-provisioning` или поставку под управлением контроллера сверки с помощью `gitops-delivery`. Изучи итоговые действия над ресурсами и фактическую конфигурацию, включая идентичности артефактов и миграции данных.
+3. Разбери риски замены, удаления, привилегий и совместимости. Обнови план или итоговый diff после рендеринга, если после проверки меняются входные данные или контекст целевой среды.
+4. Подготовь только сведения об эксплуатации, затронутые изменением: доступ, восстановление, мониторинг, развёртывание или детали runbook. Используй существующие документы или доступные шаблоны вместо создания фиксированного комплекта документов.
+5. Выполняй действия в разрешённом пользователем объёме и по политике проекта. Проверь схождение целевой среды к нужному состоянию и репрезентативное поведение нагрузки, оцени частичные сбои до повтора.
+6. Сообщи о поставленном или неприменённом состоянии, проверках, оставшихся расхождениях и ограничениях. Создавай отдельную передачу контекста только при реальной передаче работы или запросе на сохраняемую сводку.
 
-## Steps
+## Завершение
 
-1. Run platform design and identify operational boundaries.
-2. Prepare IaC or GitOps changes.
-3. Document deployment map and access map.
-4. Add observability, backup/restore, security notes, and runbook.
-5. Validate plan/render/diff and health checks.
-6. Review with SRE and security where needed.
-7. Summarize validation and remaining risks; write a handoff when work is transferred or a durable handoff is requested.
-
-## Outputs
-
-- system design
-- deployment map
-- access map
-- runbook
-- observability notes
-- backup/restore notes
-- security notes
-- handoff when work is transferred or a durable handoff is requested
+Свяжи проверенный источник и артефакт с наблюдаемой целевой средой и поведением потребителя. Отрендеренный манифест, успешный ответ API или влитый commit сами по себе не подтверждают работоспособную поставку. Оставь владельцу практический путь восстановления для изменившегося поведения.

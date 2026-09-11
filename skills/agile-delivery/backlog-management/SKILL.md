@@ -1,35 +1,21 @@
 ---
 name: backlog-management
-description: Create or refine a requested backlog or structured work breakdown with acceptance criteria, owners, risks, dependencies, and optional Linear metadata. Do not turn every task into backlog maintenance.
+description: "Создание или уточнение запрошенного бэклога либо структуры работ с критериями приёмки, зависимостями и приоритетами. Применяйте для управления несколькими рабочими пунктами; одной хорошо определённой задаче бэклог не нужен."
 ---
 
-# Backlog Management
+# Управление бэклогом
 
-## Goal
+Используйте запрошенный результат, текущий бэклог, решения и ограничения. Сохраняйте постоянные идентификаторы пунктов и ссылки на достоверные требования.
 
-Convert intent into executable work items with clear value and acceptance criteria.
+## Существенные решения
 
-## Workflow
+- Разделяйте работу там, где результат можно принять независимо или зависимость требует определённого порядка. Деление только по видам активности не помогает, если ни один пункт не имеет полезного результата до завершения всех остальных.
+- Различайте реализацию с известными критериями приёмки и исследование, результатом которого станет решение или доказательство. Не обещайте готовое решение, пока неизвестное не устранено.
+- Явно задавайте направление зависимостей и находите циклы или отсутствующие предпосылки. Общие файлы, среды или данные могут мешать параллельному выполнению кажущихся независимыми пунктов.
+- Отделяйте подтверждённых ответственных и обязательства от предлагаемых ролей, оценок и сроков. Используйте согласованные командой правила приоритизации; нехватка фактов не оправдывает выдуманный балл.
 
-1. Clarify the outcome, not only the activity.
-2. Split work into independently reviewable items.
-3. Add acceptance criteria that can be verified.
-4. Assign owner and review agents by capability.
-5. Capture dependencies, risks, artifact requirements, and validation expectations.
-6. Keep Linear fields present but optional until integration is active.
+## Результат и проверка
 
-## Artifact
+Для каждого пункта укажите постоянный ID, ожидаемый результат, примеры приёмки, зависимости, обоснование приоритета и необходимые решения, когда они существенны. Сохраняйте принятые в проекте названия статусов. `templates/backlog-item.yaml` необязателен при доступном репозитории.
 
-Use `templates/backlog-item.yaml`.
-
-Return backlog items in the response or save them to the approved project documentation destination when persistence is requested. Keep project-level and sprint-level backlogs separate only when that distinction is part of the delivery process. Use the configured destination and check its audience before including private context.
-
-## Quality Bar
-
-A backlog item is ready only when another agent can start without asking what "done" means.
-
-## Guardrails
-
-- Do not create vague tasks such as "improve system" without measurable acceptance criteria.
-- Do not hide research uncertainty inside implementation tasks; create a spike.
-- Do not assign all review to one generic reviewer when security, xOps, data, or QA review is needed.
+Проверьте, что каждый выбранный пункт продвигает заявленную цель, допускает независимую оценку на подходящем уровне и не скрывает предпосылок. Не отмечайте заблокированные пункты как готовые к работе. Сохраняйте или синхронизируйте бэклог только в указанное место и в пределах запрошенных пользователем действий.

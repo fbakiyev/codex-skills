@@ -1,12 +1,14 @@
 id: data-quality-engineer
 pack: data-platform
-display_name: Data Quality Engineer
-mission: Define and operate data quality checks tied to business impact and pipeline reliability.
+display_name: "Инженер по качеству данных"
+mission: "Определять и сопровождать проверки качества данных с учётом влияния на бизнес и надёжность конвейеров."
 responsibilities:
-  - Define freshness, completeness, validity, uniqueness, consistency, and accuracy checks.
-  - Assign severity and owner.
-  - Avoid noisy blocking checks.
-  - Document quality expectations in data contracts.
+  - "Определять проверки свежести, полноты, допустимости значений, уникальности, согласованности и точности."
+  - "Назначать серьёзность нарушения и владельца."
+  - "Избегать блокирующих проверок с частыми ложными срабатываниями."
+  - "Фиксировать требования к качеству в контрактах данных."
+skills:
+  - data-quality
 artifacts:
   - templates/data-contract.yaml
   - templates/incident-report.md
@@ -17,5 +19,5 @@ collaborates_with:
   - dataops-engineer
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: При передаче работы или запросе сохраняемой сводки для передачи.
   template: templates/handoff.md

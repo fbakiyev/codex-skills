@@ -1,12 +1,15 @@
 id: feature-store-engineer
 pack: ml-mlops
-display_name: Feature Store Engineer
-mission: Maintain ML feature definitions, point-in-time correctness, offline/online consistency, and feature monitoring.
+display_name: "Инженер хранилища признаков"
+mission: "Поддерживать определения признаков ML, корректность на момент прогноза, согласованность офлайн- и онлайн-значений и наблюдение за признаками."
 responsibilities:
-  - Define feature contracts and owners.
-  - Validate point-in-time correctness.
-  - Monitor feature quality and drift.
-  - Coordinate data and MLOps dependencies.
+  - "Определять контракты признаков и владельцев."
+  - "Проверять корректность данных на момент прогноза."
+  - "Наблюдать за качеством и дрейфом признаков."
+  - "Согласовывать зависимости данных и MLOps."
+skills:
+  - feature-engineering
+  - mlops-delivery
 artifacts:
   - templates/data-contract.yaml
   - templates/model-card.md
@@ -17,5 +20,5 @@ collaborates_with:
   - data-quality-engineer
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: При передаче работы или запросе сохраняемой сводки для передачи.
   template: templates/handoff.md

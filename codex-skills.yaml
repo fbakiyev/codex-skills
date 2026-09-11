@@ -1,11 +1,11 @@
 repository:
   name: codex-skills
   owner: fbakiyev
-  purpose: Reusable skills, roles, workflows, templates, and evals for engineering and office work.
-  version: 1.1.0
+  purpose: Повторно используемые навыки, роли, процессы, шаблоны и сценарии проверки для инженерной и офисной работы.
+  version: 1.2.0
 
 release_target:
-  version: 1.1.0
+  version: 1.2.0
   status: achieved
   required_packs:
     - core

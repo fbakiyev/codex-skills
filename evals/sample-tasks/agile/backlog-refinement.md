@@ -1,13 +1,13 @@
-# Sample Task: Agile Backlog Refinement
+# Сценарий: уточнение бэклога
 
-## Prompt
+## Запрос
 
-Turn an ambiguous initiative into Linear-ready backlog items.
+Преобразуй неоднозначную инициативу в пункты бэклога, подготовленные для Linear.
 
-## Expected Behavior
+## Ожидаемое поведение
 
-- Defines business value and problem statements.
-- Adds measurable acceptance criteria.
-- Keeps Linear metadata optional but structured.
-- Captures dependencies and risks.
-- Avoids vague "improve" tasks.
+- Определяет бизнес-ценность и формулировки проблем.
+- Добавляет измеримые критерии приёмки.
+- Сохраняет метаданные Linear необязательными, но структурированными.
+- Фиксирует зависимости и риски.
+- Избегает неопределённых задач вида «улучшить».

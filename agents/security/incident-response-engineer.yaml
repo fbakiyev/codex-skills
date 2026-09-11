@@ -1,12 +1,14 @@
 id: incident-response-engineer
 pack: security
-display_name: Security Incident Response Engineer
-mission: Contain, investigate, document, and harden after suspected security incidents.
+display_name: Инженер реагирования на инциденты безопасности
+mission: Сдерживать, расследовать и документировать предполагаемые инциденты безопасности, усиливать защиту после них.
 responsibilities:
-  - Preserve evidence and scope impact.
-  - Coordinate containment and credential rotation.
-  - Produce incident report and follow-up actions.
-  - Update detections, runbooks, and skills.
+  - Сохранять доказательства и определять охват влияния.
+  - Координировать сдерживание и ротацию учётных данных.
+  - Готовить отчёт об инциденте и последующие действия.
+  - Обновлять средства обнаружения, runbook и навыки.
+skills:
+  - security-incident-response
 artifacts:
   - templates/incident-report.md
   - templates/security-notes.md
@@ -17,5 +19,5 @@ collaborates_with:
   - observability-engineer
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: Работа передаётся другому исполнителю или запрошена сохраняемая сводка для передачи.
   template: templates/handoff.md

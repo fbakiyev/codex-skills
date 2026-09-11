@@ -1,29 +1,29 @@
-# Backup And Restore
+# Резервное копирование и восстановление
 
-## Stateful Components
+## Компоненты с хранимым состоянием
 
 -
 
-## Backup
+## Резервное копирование
 
-- Mechanism:
-- Schedule:
-- Retention:
-- Encryption:
-- Storage:
-- Owner:
+- Механизм:
+- Расписание:
+- Срок хранения:
+- Шифрование:
+- Хранилище:
+- Ответственный:
 
-## Restore
+## Восстановление
 
-- Procedure:
-- Validation:
-- Last tested:
+- Процедура:
+- Проверка:
+- Последняя проверка:
 
-## Recovery Targets
+## Целевые показатели восстановления
 
 - RPO:
 - RTO:
 
-## Risks
+## Риски
 
 -

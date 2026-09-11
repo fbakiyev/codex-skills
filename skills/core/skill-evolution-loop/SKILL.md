@@ -1,15 +1,15 @@
 ---
 name: skill-evolution-loop
-description: Improve a skill library when the user requests reusable workflow maintenance or an authorized review identifies a recurring instruction problem. Use for deliberate skill changes; an ordinary task failure alone does not authorize editing shared instructions.
+description: "Улучшение библиотеки навыков по запросу пользователя или когда согласованная проверка выявила повторяющуюся проблему инструкций. Применяйте для целенаправленных изменений навыков; ошибка обычной задачи сама по себе не разрешает менять общие инструкции."
 ---
 
-# Skill Evolution Loop
+# Сопровождение навыков
 
-1. Identify a reproducible failure, confusing trigger, repeated manual operation, or missing quality criterion.
-2. Confirm which reusable behavior belongs in the requested maintenance scope. Fix the current task first when that is the user's actual request.
-3. Choose the smallest correction: a trigger, procedural rule, reference, optional template, deterministic helper, or representative evaluation case.
-4. Keep the skill focused and independently usable. Do not turn one person's temporary preference into a universal rule or add a role for an existing responsibility.
-5. Compare the revised behavior against the same input and an adjacent task that should not trigger it. Check success criteria and lost constraints, not merely wording similarity.
-6. Run applicable metadata and repository checks. Report what was actually exercised and what remains untested.
+1. Найдите воспроизводимую ошибку, неоднозначный сценарий включения, повторяющуюся ручную операцию или недостающий критерий качества.
+2. Определите, какое повторно используемое поведение входит в запрошенную доработку. Если пользователь решает текущую задачу, сначала исправьте её.
+3. Выберите минимальное исправление: условие применения, правило выполнения, справку, необязательный шаблон, детерминированный вспомогательный скрипт или характерный сценарий оценки.
+4. Сохраняйте узкое назначение и самостоятельную применимость навыка. Не превращайте временное предпочтение одного человека в общее правило и не добавляйте роль для уже покрытой обязанности.
+5. Проверьте изменённое поведение на тех же исходных данных и на соседней задаче, которая не должна включать навык. Оценивайте критерии успеха и сохранность ограничений, а не сходство формулировок.
+6. Выполните применимые проверки метаданных и репозитория. Укажите, что фактически проверено и что осталось непроверенным.
 
-Keep a reusable problem and evaluation case in the library. Store maintenance notes according to project policy and keep private context out of public artifacts; `templates/skill-evolution-record.md` is optional for a requested record. Publication and global installation remain governed by the user's authorization and workspace rules.
+Сохраните в библиотеке обобщённую проблему и сценарий её проверки. Заметки о сопровождении храните по правилам проекта, частный контекст исключайте из публичных материалов. `templates/skill-evolution-record.md` можно использовать для запрошенной записи. Публикация и установка для всех проектов остаются в пределах разрешений пользователя и правил рабочей области.

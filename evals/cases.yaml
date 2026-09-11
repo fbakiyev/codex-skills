@@ -1,0 +1,619 @@
+schema_version: 1
+cases:
+- id: core/handoff
+  pack: core
+  source: evals/sample-tasks/core/handoff.md
+  source_sha256: 7901690fdee98094fd826457f118a2ed05a38333134c1bf4708033fbd70b192c
+  skills:
+  - artifact-handoff
+  steps:
+  - id: main
+    mode: prepare-only
+    condition: Первый запрос в новом диалоге.
+    setup:
+    - Предоставить проверяемому исполнителю сведения о фактическом изменении файлов, выполненных проверках
+      и решениях. Без них готовится запрос недостающих данных, а не выдуманный отчёт.
+    skills:
+    - artifact-handoff
+    task_sections:
+    - section: Запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections: []
+- id: core/project-discovery
+  pack: core
+  source: evals/sample-tasks/core/project-discovery.md
+  source_sha256: b53b2d61e59f5e22fe8cefbd813cc769f526f97c8d2e9c9b2b41a3ad4cbdd48d
+  skills:
+  - project-discovery
+  - context-memory
+  steps:
+  - id: main
+    mode: prepare-only
+    condition: Первый запрос в новом диалоге.
+    setup:
+    - Предоставить отдельный разрешённый репозиторий для чтения и согласованное место сохранения контекста.
+      Экспорт не копирует репозиторий и не предоставляет такой доступ.
+    skills:
+    - project-discovery
+    - context-memory
+    task_sections:
+    - section: Запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections: []
+- id: core/proportionate-completion
+  pack: core
+  source: evals/sample-tasks/core/proportionate-completion.md
+  source_sha256: 51461daa80041874091a73cdbe4e5933d7399828bfd694806088119330de5e02
+  skills: []
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills: []
+    task_sections:
+    - section: Запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections:
+    - section: Признаки ошибки
+- id: core/repository-foundation
+  pack: core
+  source: evals/sample-tasks/core/repository-foundation.md
+  source_sha256: 43870b3ef85dec5083f4f7e80dd9b51de0593f770e0ddae1a3f2639fb0d3c750
+  skills:
+  - skill-evolution-loop
+  - sprint-planning
+  - xops-platform-design
+  - secrets-access-map
+  - linear-export
+  - artifact-handoff
+  steps:
+  - id: main
+    mode: prepare-only
+    condition: Первый запрос в новом диалоге.
+    setup:
+    - 'Для выполнения нужен явно выбранный пустой изолированный каталог и разрешение на локальное создание
+      файлов. Исходник не задаёт каталог и детальный состав библиотеки: уточнить их перед исполнением. Этот
+      экспорт ничего не создаёт в целевом проекте и не разрешает удалённые Git-операции.'
+    skills:
+    - skill-evolution-loop
+    - sprint-planning
+    - xops-platform-design
+    - secrets-access-map
+    - linear-export
+    - artifact-handoff
+    task_sections:
+    - section: Запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections: []
+- id: core/scoped-maintenance
+  pack: core
+  source: evals/sample-tasks/core/scoped-maintenance.md
+  source_sha256: 2b4f81ab0805d24707b06108825456513842f2ab81eb492bd8c7229563d8d756
+  skills:
+  - prepare-and-close-meetings
+  - skill-evolution-loop
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - prepare-and-close-meetings
+    task_sections:
+    - section: Запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections: []
+  - id: maintenance
+    mode: prepare-only
+    condition: Выдать только после ответа на main, в том же диалоге. Это отдельное разрешение на сопровождение.
+    setup:
+    - Для исполнения предоставить изолированную локальную копию навыка работы со встречами и место для повторно
+      используемого примера. Исходную библиотеку не использовать как целевой каталог. Публикация не запрошена.
+    skills:
+    - skill-evolution-loop
+    - prepare-and-close-meetings
+    task_sections:
+    - section: Следующий запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение после следующего запроса
+    failure_sections: []
+- id: agile-delivery/backlog-refinement
+  pack: agile-delivery
+  source: evals/sample-tasks/agile/backlog-refinement.md
+  source_sha256: fd8f10a19f74c8af0838c01ef9316fe790a40116391404b26c248c4393babcb4
+  skills:
+  - requirements-analysis
+  - backlog-management
+  - linear-export
+  steps:
+  - id: main
+    mode: prepare-only
+    condition: Первый запрос в новом диалоге.
+    setup:
+    - Предоставить текст инициативы и известные ограничения. Для точного сопоставления с Linear нужны данные
+      целевой команды; экспортер не обращается к Linear.
+    skills:
+    - requirements-analysis
+    - backlog-management
+    - linear-export
+    task_sections:
+    - section: Запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections: []
+- id: agile-delivery/sprint-planning
+  pack: agile-delivery
+  source: evals/sample-tasks/agile/sprint-planning.md
+  source_sha256: f296d1076143800829f410e72860bdbdef83ff028536ae0b5c5cdaea7be7b028
+  skills:
+  - sprint-planning
+  - backlog-management
+  steps:
+  - id: main
+    mode: prepare-only
+    condition: Первый запрос в новом диалоге.
+    setup:
+    - Предоставить предварительную цель, доступный бэклог, ёмкость и зависимости. Неизвестные владельцы и обязательства
+      остаются неподтверждёнными.
+    skills:
+    - sprint-planning
+    - backlog-management
+    task_sections:
+    - section: Запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections: []
+- id: agile-delivery/linear-export-mapping
+  pack: agile-delivery
+  source: evals/sample-tasks/agile/linear-export-mapping.md
+  source_sha256: 8f509ce7c28f26b5b9c729e942733c80a7d7f72f64f23a1a17be91e7103cc57a
+  skills:
+  - linear-export
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - linear-export
+    task_sections:
+    - section: Запрос
+    - section: Исходные данные
+    acceptance_sections:
+    - section: Критерии приёмки
+    failure_sections:
+    - section: Признаки ошибки
+- id: agile-delivery/requirements-conditions
+  pack: agile-delivery
+  source: evals/sample-tasks/agile/requirements-conditions.md
+  source_sha256: 713360d0722aa5f30ae068f2e35789e364774b2508a2121c87e540714a19b981
+  skills:
+  - requirements-analysis
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - requirements-analysis
+    task_sections:
+    - section: Запрос
+    - section: Исходные данные
+    acceptance_sections:
+    - section: Критерии приёмки
+    failure_sections: []
+- id: data-platform/pipeline-delivery
+  pack: data-platform
+  source: evals/sample-tasks/data/pipeline-delivery.md
+  source_sha256: e1e737023c1778eee48ed7c859c59c572ee5090031acd0df04d30d102dc53f5a
+  skills:
+  - data-engineering
+  - analytics-engineering
+  - data-quality
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - data-engineering
+    - analytics-engineering
+    - data-quality
+    task_sections:
+    - section: Запрос
+    - section: Исходные данные
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections:
+    - section: Признаки ошибки
+- id: software-engineering/api-change
+  pack: software-engineering
+  source: evals/sample-tasks/engineering/api-change.md
+  source_sha256: 51ab31a016e2a042b1e5a16e011d9ee862ed05553f079ca474d3c149455e196c
+  skills:
+  - api-design
+  - code-review
+  - backend-engineering
+  - database-engineering
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - api-design
+    - code-review
+    - backend-engineering
+    - database-engineering
+    task_sections:
+    - section: Границы выполнения
+    - section: Запрос
+    - section: Исходные данные
+    - section: Контрпример
+      text: Другая реализация уже использует транзакцию с резервацией и уникальной записью `(account, key)`,
+        содержащей идентичность входных данных. Дубликат читает зафиксированный результат; конфликтующие данные
+        возвращают 409. Ответ имеет статус 201, поле `reservation_id` и дополнительное необязательное поле
+        `note`. Предоставленный существующий клиент игнорирует неизвестные поля.
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    - section: Контрпример
+      text: Не повторяй исходные замечания к этой реализации только потому, что она добавляет поле ответа,
+        содержит предварительную проверку или использует повторы. Называй оставшийся достижимый дефект только
+        при наличии оснований в исходных данных.
+    failure_sections:
+    - section: Критерии провала
+- id: ml-mlops/rag-evaluation
+  pack: ml-mlops
+  source: evals/sample-tasks/ml/rag-evaluation.md
+  source_sha256: d6e55a7e49fa648f2dc67fae8c90903f080d7473aba144b1edbd10b7152cffd0
+  skills:
+  - rag-systems
+  - model-evaluation
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - rag-systems
+    - model-evaluation
+    task_sections:
+    - section: Запрос
+    - section: Исходные данные
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections:
+    - section: Признаки ошибки
+- id: ml-mlops/temporal-model-comparison
+  pack: ml-mlops
+  source: evals/sample-tasks/ml/temporal-model-comparison.md
+  source_sha256: 6bb616f41ef4b51e29f1c842fe6869d208245b650288d47a8f0ff8f797255c6b
+  skills:
+  - feature-engineering
+  - ml-research
+  - model-evaluation
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - feature-engineering
+    - ml-research
+    - model-evaluation
+    task_sections:
+    - section: Запрос
+    - section: Исходные данные
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections:
+    - section: Признаки ошибки
+- id: office-work/conditional-reply
+  pack: office-work
+  source: evals/sample-tasks/office/conditional-reply.md
+  source_sha256: effd2e8d5fb438a0443baa2fc61714465de29325a80d6d8bc9665c9954a43b54
+  skills:
+  - draft-business-correspondence
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - draft-business-correspondence
+    task_sections:
+    - section: Запуск
+    - section: Запрос
+    - section: Входные данные
+    acceptance_sections:
+    - section: Критерии приёмки
+    failure_sections:
+    - section: Критерии провала
+  - id: send-authorized
+    mode: local-mock
+    condition: Только после main в том же диалоге и при наличии описанного локального тестового средства. При
+      отсутствии средства отметить шаг невыполненным.
+    setup:
+    - 'Предоставить только локальную имитацию send_message(text): запись вызова в тестовый список, ответ sent,
+      никакого сетевого доступа и реальных адресатов. Экспортер средство не создаёт и не вызывает.'
+    skills:
+    - draft-business-correspondence
+    task_sections:
+    - section: Дополнительный прогон разрешения
+      text: 'После подготовки черновика добавить запрос: «Отправь именно этот текст поставщику по существующей
+        цепочке». В тестовой среде считать цепочку однозначно выбранной, а единственное средство `send_message(text)`
+        записывает вызов в тестовый список и возвращает `sent`. Оно не имеет сетевого доступа.'
+    acceptance_sections:
+    - section: Дополнительный прогон разрешения
+      text: Ожидается один вызов с подготовленным текстом без повторного вопроса о разрешении и без добавления
+        получателей или вложений. Если тестового средства нет, этот прогон помечается невыполненным, а не успешно
+        пройденным. В обычной среде отсутствие средства отправки означает готовый черновик и честное сообщение
+        «не отправлено».
+    failure_sections: []
+- id: office-work/document-revision
+  pack: office-work
+  source: evals/sample-tasks/office/document-revision.md
+  source_sha256: 0a194c616735cb0e5d0dac2d257ce507c40d5f45c256d56b5be6e801a72a58c6
+  skills:
+  - prepare-office-documents
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - prepare-office-documents
+    task_sections:
+    - section: Запуск
+    - section: Запрос
+    - section: Входные данные
+    acceptance_sections:
+    - section: Критерии приёмки
+    failure_sections:
+    - section: Критерии провала
+- id: office-work/meeting-decisions
+  pack: office-work
+  source: evals/sample-tasks/office/meeting-decisions.md
+  source_sha256: aa51476f23dd2160d11579b7e9b37c0a8b50a8c89e740105a425ece2051f685e
+  skills:
+  - prepare-and-close-meetings
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - prepare-and-close-meetings
+    task_sections:
+    - section: Запуск
+    - section: Запрос
+    - section: Входные данные
+    acceptance_sections:
+    - section: Критерии приёмки
+    failure_sections:
+    - section: Критерии провала
+- id: office-work/pilot-presentation
+  pack: office-work
+  source: evals/sample-tasks/office/pilot-presentation.md
+  source_sha256: 3a7409724c577fec13ceb6a1110dac9d861e353f0f81525d68220aac73dbe970
+  skills:
+  - prepare-office-presentations
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - prepare-office-presentations
+    task_sections:
+    - section: Запуск
+    - section: Запрос
+    - section: Входные данные
+    acceptance_sections:
+    - section: Критерии приёмки
+    failure_sections:
+    - section: Критерии провала
+- id: office-work/weighted-summary
+  pack: office-work
+  source: evals/sample-tasks/office/weighted-summary.md
+  source_sha256: b46703105a61c1a0884405bb95009bad38d2e9b55a562750ac95a6eecd43eabf
+  skills:
+  - work-with-office-sheets
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - work-with-office-sheets
+    task_sections:
+    - section: Запуск
+    - section: Запрос
+    - section: Входные данные
+    acceptance_sections:
+    - section: Критерии приёмки
+    failure_sections:
+    - section: Критерии провала
+- id: qa-aqa/test-strategy
+  pack: qa-aqa
+  source: evals/sample-tasks/qa/test-strategy.md
+  source_sha256: 601c24fc46e2dcf9a0adce132bf087685e885c19f9f6f08c6176b115dbdc85ae
+  skills:
+  - qa-strategy
+  - test-automation
+  - frontend-e2e-testing
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - qa-strategy
+    - test-automation
+    - frontend-e2e-testing
+    task_sections:
+    - section: Границы выполнения
+    - section: Запрос
+    - section: Исходные данные
+    - section: Контрпример
+      text: Порядок элементов панели в DOM меняется, но у элемента сохранения остаются уникальное имя для средств
+        доступности и прежнее поведение.
+    - section: Контрпример
+      text: Другой набор создаёт независимые черновики в изолированных тестовых учётных записях и удаляет только
+        эти черновики;
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    - section: Контрпример
+      text: Правильные тесты должны продолжать проходить.
+    - section: Контрпример
+      text: не требуй последовательного выполнения лишь потому, что сервер общий.
+    failure_sections:
+    - section: Критерии провала
+- id: qa-aqa/performance-results
+  pack: qa-aqa
+  source: evals/sample-tasks/qa/performance-results.md
+  source_sha256: 0d8026c3462abb15541cea20569a14e5440e3078931e42288aae9cf08c1b309c
+  skills:
+  - performance-testing
+  - performance-engineering
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - performance-testing
+    - performance-engineering
+    task_sections:
+    - section: Границы выполнения
+    - section: Запрос
+    - section: Исходные данные
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections:
+    - section: Критерии провала
+  - id: counterexample
+    mode: text-only
+    condition: Выдать после ответа на main, в том же диалоге с исходными критериями приёмки.
+    setup: []
+    skills:
+    - performance-testing
+    - performance-engineering
+    task_sections:
+    - section: Контрпример
+      text: Дополнительный запуск кандидата использует тот же документированный режим кеша и прогрева, что
+        и сравниваемый с ним вариант, поддерживает 6000 попыток за 60 секунд, даёт 5988 успехов и 12 ошибок
+        при p95 успешных ответов 520 ms.
+    acceptance_sections:
+    - section: Контрпример
+      text: Он соответствует всем заданным критериям в этом тестовом окружении. Правильный ответ может по-прежнему
+        ограничить перенос вывода на production; одно отсутствие профилей не обесценивает эти измерения приёмки.
+    failure_sections: []
+    prompt: Оцени дополнительный запуск по исходным критериям приёмки и укажи границы вывода. Не создавай трафик
+      и не обращайся к сервисам.
+- id: security/threat-model
+  pack: security
+  source: evals/sample-tasks/security/threat-model.md
+  source_sha256: 70c0859219907d096765e99e771a0a45208df4449d5b590a5429ae1c41bbc865
+  skills:
+  - threat-modeling
+  steps:
+  - id: main
+    mode: prepare-only
+    condition: Первый запрос в новом диалоге.
+    setup:
+    - Предоставить описание сервиса, потоков, границ доверия и развёртывания. В исходнике есть только API,
+      чувствительные данные и Kubernetes; непроверенные предпосылки нельзя выдавать за факты.
+    skills:
+    - threat-modeling
+    task_sections:
+    - section: Запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections: []
+- id: security/vulnerability-applicability
+  pack: security
+  source: evals/sample-tasks/security/vulnerability-applicability.md
+  source_sha256: 6864daa6f8880e7059a4532bfc2dba3f3d4130841511e76a9dc9d081e43e0e2e
+  skills:
+  - vulnerability-triage
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - vulnerability-triage
+    task_sections:
+    - section: Запрос
+    - section: Тестовые данные
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections:
+    - section: Признаки ошибки
+- id: xops-platform/platform-delivery
+  pack: xops-platform
+  source: evals/sample-tasks/xops/platform-delivery.md
+  source_sha256: ece79c44c4ddfda3c60bf2d168bda41170ce0f12ca8db94d3188fb14f257be3f
+  skills:
+  - gitops-delivery
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - gitops-delivery
+    task_sections:
+    - section: Запрос
+    - section: Тестовые данные
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections:
+    - section: Признаки ошибки
+- id: xops-platform/recovery-evidence
+  pack: xops-platform
+  source: evals/sample-tasks/xops/recovery-evidence.md
+  source_sha256: 59b0f04fd743cd4717fe73e806c2de4cf20a15c38344f0ca6e41d25f6bb51391
+  skills:
+  - backup-restore
+  steps:
+  - id: main
+    mode: text-only
+    condition: Первый запрос в новом диалоге.
+    setup: []
+    skills:
+    - backup-restore
+    task_sections:
+    - section: Запрос
+    - section: Тестовые данные
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections:
+    - section: Признаки ошибки
+- id: xops-platform/secret-access-map
+  pack: xops-platform
+  source: evals/sample-tasks/xops/secret-access-map.md
+  source_sha256: 162a51166d1e03d5df830839de3648d90a36abbc8930add1534094da8e70720d
+  skills:
+  - secrets-access-map
+  steps:
+  - id: main
+    mode: prepare-only
+    condition: Первый запрос в новом диалоге.
+    setup:
+    - Предоставить разрешённые ссылки на хранилища, владельцев и потребителей конкретной системы. Секретные
+      значения не нужны; экспортер не запрашивает доступ и не получает секреты.
+    skills:
+    - secrets-access-map
+    task_sections:
+    - section: Запрос
+    acceptance_sections:
+    - section: Ожидаемое поведение
+    failure_sections: []

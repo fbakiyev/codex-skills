@@ -1,12 +1,12 @@
-# Sample Task: Threat Model
+# Пример задачи: модель угроз
 
-## Prompt
+## Запрос
 
-Threat model a new platform service that exposes an API, stores sensitive data, and runs in Kubernetes.
+Построй модель угроз для нового платформенного сервиса, который предоставляет API, хранит чувствительные данные и работает в Kubernetes.
 
-## Expected Behavior
+## Ожидаемое поведение
 
-- Identifies assets, actors, trust boundaries, and data flows.
-- Covers auth, secrets, network, logs, and storage.
-- Produces mitigations and residual risks.
-- Creates backlog-ready follow-up.
+- Определяет активы, участников, границы доверия и потоки данных.
+- Охватывает аутентификацию и авторизацию, секреты, сеть, логи и хранение.
+- Предлагает защитные меры и указывает остаточные риски.
+- Готовит последующие действия, пригодные для включения в список задач.

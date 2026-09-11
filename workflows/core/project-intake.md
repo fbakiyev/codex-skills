@@ -1,17 +1,17 @@
-# Workflow: Project Intake
+# Процесс: начало работы с проектом
 
-## Trigger
+## Когда применять
 
-Use when a new technical initiative needs a project map and an execution approach. A self-contained document, calculation, or message can go directly to its relevant skill.
+Когда новой технической инициативе нужны карта проекта и подход к выполнению. Для самостоятельного документа, расчёта или сообщения можно сразу выбрать соответствующий навык.
 
-## Steps
+## Шаги
 
-1. Use `project-discovery` to find the context relevant to the requested result.
-2. Resolve material gaps in sources, ownership, environments, and acceptance criteria. Continue independent authorized work.
-3. Choose a process proportional to the work: direct execution for a bounded change, a backlog for several work items, or the team's established sprint or incident process.
-4. Involve domain roles only where independent expertise or parallel work helps.
-5. Save a project brief or backlog only if the task needs one. Use the configured project destination and check its visibility before including private context.
+1. Используйте `project-discovery`, чтобы найти контекст, существенный для запрошенного результата.
+2. Устраните важные пробелы в источниках, ответственности, средах и критериях приёмки. Продолжайте независимую разрешённую работу.
+3. Выберите процесс по масштабу: прямое выполнение ограниченного изменения, бэклог для нескольких пунктов либо принятый командой процесс спринта или инцидента.
+4. Привлекайте профильные роли, когда помогают независимая экспертиза или параллельная работа.
+5. Сохраняйте описание проекта или бэклог, только если они нужны задаче. Используйте выбранное место и проверьте видимость перед включением частного контекста.
 
-## Outputs
+## Результат
 
-A compact project map and the next executable step, plus any brief, backlog, or risk record required by the initiative.
+Краткая карта проекта и следующий выполнимый шаг, а также описание, бэклог или запись рисков, если они нужны инициативе.

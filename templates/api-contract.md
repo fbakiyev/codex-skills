@@ -1,37 +1,37 @@
-# API Contract
+# Контракт API
 
-## Purpose
-
--
-
-## Consumers
+## Назначение
 
 -
 
-## Authentication And Authorization
+## Потребители
 
 -
 
-## Endpoints Or Messages
+## Аутентификация и авторизация
 
 -
 
-## Request Schema
+## Конечные точки или сообщения
 
 -
 
-## Response Schema
+## Схема запроса
 
 -
 
-## Errors
+## Схема ответа
 
 -
 
-## Versioning And Compatibility
+## Ошибки
 
 -
 
-## Examples
+## Версии и совместимость
+
+-
+
+## Примеры
 
 -

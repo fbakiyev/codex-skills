@@ -1,33 +1,33 @@
-# Handoff
+# Передача работы
 
-## Context
+## Контекст
 
-- Project:
-- Sprint:
-- Task:
-- Owner agent:
-- Reviewer agents:
+- Проект:
+- Спринт:
+- Задача:
+- Ответственная роль:
+- Роли рецензентов:
 
-## Completed
-
--
-
-## Validation
+## Завершено
 
 -
 
-## Decisions
+## Проверка
 
 -
 
-## Artifacts Updated
+## Решения
 
 -
 
-## Risks
+## Обновлённые материалы
 
 -
 
-## Next Steps
+## Риски
+
+-
+
+## Следующие действия
 
 -

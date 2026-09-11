@@ -1,29 +1,29 @@
-# Workflow: Sprint Planning
+# Процесс: планирование спринта
 
-## Trigger
+## Когда применять
 
-Use when sprint planning is requested or the scoped delivery increment already belongs to an established sprint process.
+Когда запрошено планирование спринта или ограниченный этап поставки уже относится к действующему процессу спринтов.
 
-## Agents
+## Роли
 
 - `scrum-master`
 - `project-manager`
 - `product-owner`
 - `delivery-lead`
-- relevant domain owners and reviewers
+- Нужные профильные ответственные и рецензенты
 
-## Steps
+## Шаги
 
-1. Read the available project state, backlog, risks, and any relevant prior handoff.
-2. Define sprint goal and non-goals.
-3. Select backlog items aligned to the goal.
-4. Confirm owner and reviewer agents.
-5. Define DoR, DoD, validation, and required artifacts.
-6. Create sprint brief and sprint backlog.
+1. Изучите доступное состояние проекта, бэклог, риски и существенные предыдущие сводки передачи.
+2. Определите цель спринта и то, что в неё не входит.
+3. Выберите пункты по ёмкости и порядку зависимостей; отделите обязательную работу от дополнительной при наличии запаса.
+4. Сохраните подтверждённых ответственных и рецензентов; явно отметьте неназначенные или предлагаемые роли.
+5. Определите готовность к началу (DoR), критерии завершения (DoD), проверки и необходимые материалы.
+6. Верните план, предположения и варианты переноса, если ёмкость или зависимость изменится.
 
-## Outputs
+## Результат
 
-- sprint brief using `templates/sprint-brief.md`
-- sprint backlog items using `templates/backlog-item.yaml`
+- Краткий план спринта; `templates/sprint-brief.md` необязателен.
+- Выбранные пункты бэклога; `templates/backlog-item.yaml` необязателен.
 
-Return these outputs in the response or use the approved project documentation destination when durable planning documents are requested.
+Верните материалы в ответе или используйте согласованное место документации, если запрошены сохраняемые планы.

@@ -1,13 +1,13 @@
-# Sample Task: Core Project Discovery
+# Сценарий: знакомство с проектом
 
-## Prompt
+## Запрос
 
-You are dropped into an unfamiliar repository. Build a concise project map without dumping the whole tree, identify validation commands, and leave a resumable memory artifact.
+Ты начинаешь работу в незнакомом репозитории. Подготовь краткую карту проекта без выгрузки всего дерева, найди команды проверки и сохрани контекст, по которому можно продолжить работу.
 
-## Expected Behavior
+## Ожидаемое поведение
 
-- Reads local guidance first.
-- Uses targeted search.
-- Produces a compact project brief.
-- Marks assumptions explicitly.
-- Does not claim facts without evidence.
+- Сначала читает локальные инструкции.
+- Использует адресный поиск.
+- Готовит краткое описание проекта.
+- Явно отмечает предположения.
+- Не утверждает факты без подтверждений.

@@ -271,7 +271,9 @@ def check_xops_templates(root: Path, catalog: dict) -> None:
         return
     if "never_store_value: true" not in read_text(root / "templates" / "access-map.yaml"):
         fail("templates/access-map.yaml must include never_store_value: true")
-    if "Do not duplicate secret values" not in read_text(root / "templates" / "runbook.md"):
+    runbook = read_text(root / "templates" / "runbook.md")
+    warnings = ("Не дублируйте здесь значения секретов", "Do not duplicate secret values")
+    if not any(warning in runbook for warning in warnings):
         fail("templates/runbook.md must warn against duplicating secret values")
 
 

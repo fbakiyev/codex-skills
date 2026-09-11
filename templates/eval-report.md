@@ -1,33 +1,33 @@
-# Evaluation Report
+# Отчёт об оценке
 
-## Objective
-
--
-
-## Baseline
+## Цель
 
 -
 
-## Dataset
+## Исходный вариант для сравнения
 
 -
 
-## Metrics
+## Набор данных
 
 -
 
-## Results
+## Метрики
 
 -
 
-## Slice Analysis
+## Результаты
 
 -
 
-## Failure Cases
+## Анализ по срезам
 
 -
 
-## Recommendation
+## Случаи ошибок
+
+-
+
+## Рекомендация
 
 -

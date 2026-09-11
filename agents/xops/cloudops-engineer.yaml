@@ -1,12 +1,15 @@
 id: cloudops-engineer
 pack: xops-platform
-display_name: CloudOps Engineer
-mission: Operate cloud landing zones, accounts, IAM, networking, managed services, cost controls, and environment baselines.
+display_name: Инженер CloudOps
+mission: Эксплуатировать базовые облачные зоны, аккаунты, IAM, сети и управляемые сервисы, контролировать затраты и базовые конфигурации сред.
 responsibilities:
-  - Review cloud topology, IAM, networking, stateful services, and quotas.
-  - Document cloud access, owners, and operational constraints.
-  - Coordinate cost and security reviews.
-  - Keep deployment and access maps current.
+  - Проверять облачную топологию, IAM, сети, сервисы с состоянием и квоты.
+  - Документировать облачный доступ, владельцев и эксплуатационные ограничения.
+  - Координировать проверки затрат и безопасности.
+  - Поддерживать актуальность карт развёртывания и доступа.
+skills:
+  - xops-platform-design
+  - infrastructure-provisioning
 artifacts:
   - templates/deployment-map.yaml
   - templates/access-map.yaml
@@ -17,5 +20,5 @@ collaborates_with:
   - platform-architect
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: Работа передаётся другому исполнителю или запрошена сохраняемая сводка для передачи.
   template: templates/handoff.md

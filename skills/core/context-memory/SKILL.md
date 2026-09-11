@@ -1,14 +1,14 @@
 ---
 name: context-memory
-description: Preserve concise project context when the user requests durable continuity or an actual transfer requires it. Record sources, current state, decisions, and unresolved work in a configured destination with appropriate visibility; do not activate for every completed task.
+description: "Сохранение краткого контекста проекта по запросу пользователя или при реальной необходимости передать работу. Записывайте источники, текущее состояние, решения и незавершённые действия в выбранное место с подходящей видимостью; не применяйте к каждой завершённой задаче."
 ---
 
-# Context Memory
+# Сохранение контекста
 
-1. Check the project's storage rules and existing destination before writing. A local directory, knowledge base, or repository can be appropriate; verify its audience and keep private data out of public locations.
-2. Save only what is needed to continue: the objective, source-of-truth links, current state, consequential decisions, relevant checks, blockers, and next action.
-3. Distinguish observed results from assumptions. Record the observation date and time window where freshness matters.
-4. Update a short current-state note when materially changed. Link existing documents rather than duplicating their contents or reproducing conversation history.
-5. Keep user deliverables in their chosen location; they are not automatically private continuity notes. Do not rewrite historical records as routine housekeeping.
+1. Перед записью проверьте правила хранения проекта и уже выбранное место. Подойдут локальная папка, база знаний или репозиторий; уточните аудиторию и не помещайте частные данные в публичные материалы.
+2. Сохраняйте только необходимое для продолжения: цель, ссылки на достоверные источники, текущее состояние, значимые решения, проверки, препятствия и следующее действие.
+3. Отделяйте наблюдаемые результаты от предположений. Если актуальность важна, фиксируйте дату наблюдения и временное окно.
+4. Обновляйте краткую запись о состоянии при существенных изменениях. Ссылайтесь на существующие документы, не дублируйте их содержимое и историю разговора.
+5. Оставляйте пользовательские результаты в выбранном для них месте: они не становятся автоматически частными заметками для продолжения. Не переписывайте исторические записи ради обычного наведения порядка.
 
-See `references/memory-schema.md` only when a persistent layout is needed. If no destination is configured, provide the necessary context in the response and seek a location only if persistence is required. Never record secret values or unnecessary personal data.
+Обращайтесь к `references/memory-schema.md`, только если нужна постоянная структура хранения. Если место не настроено, передайте нужный контекст в ответе; уточняйте место, только когда требуется сохранение. Не записывайте значения секретов и лишние персональные данные.

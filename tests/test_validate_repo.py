@@ -131,6 +131,23 @@ class RepositoryValidationTests(unittest.TestCase):
         self.write_agent("agents/core/role.yaml", handoff={"template": "templates/missing.md"})
         self.assert_invalid("handoff.template")
 
+    def test_runbook_warning_accepts_russian_and_english(self) -> None:
+        self.add_pack("xops-platform", "example-xops", "example-operator")
+        self.write("templates/access-map.yaml", "never_store_value: true\n")
+        for warning in (
+            "Ссылайтесь на `access-map.yaml`. Не дублируйте здесь значения секретов.",
+            "Reference `access-map.yaml`. Do not duplicate secret values here.",
+        ):
+            with self.subTest(warning=warning):
+                self.write("templates/runbook.md", warning + "\n")
+                validator.validate(self.root)
+
+    def test_runbook_still_requires_secret_warning(self) -> None:
+        self.add_pack("xops-platform", "example-xops", "example-operator")
+        self.write("templates/access-map.yaml", "never_store_value: true\n")
+        self.write("templates/runbook.md", "# Инструкция эксплуатации\n\nСсылайтесь на `access-map.yaml`.\n")
+        self.assert_invalid("must warn against duplicating secret values")
+
     def test_secret_diagnostic_never_prints_value(self) -> None:
         secret = "gh" + "p_" + "A" * 35
         self.write("example.txt", "Example\n" + secret + "\n")

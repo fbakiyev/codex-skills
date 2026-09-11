@@ -1,33 +1,33 @@
-# System Analysis
+# Системный анализ
 
-## Context
-
--
-
-## Actors And Systems
+## Контекст
 
 -
 
-## Main Flows
+## Участники и системы
 
 -
 
-## Failure Flows
+## Основные сценарии
 
 -
 
-## Contracts
+## Сценарии отказа
 
 -
 
-## Data And State
+## Контракты
 
 -
 
-## Edge Cases
+## Данные и состояние
 
 -
 
-## Validation Implications
+## Граничные случаи
+
+-
+
+## Последствия для проверки
 
 -

@@ -1,27 +1,27 @@
-# Workflow: Backlog Refinement
+# Процесс: уточнение бэклога
 
-## Trigger
+## Когда применять
 
-Use when the user requests backlog creation, refinement, or a structured work breakdown for goals, ideas, incidents, research, or technical debt.
+Когда пользователь просит создать или уточнить бэклог либо структуру работ для целей, идей, инцидентов, исследований или технического долга.
 
-## Agents
+## Роли
 
 - `product-owner`
 - `business-analyst`
 - `system-analyst`
-- `data-analyst` when metrics or data are involved
-- relevant domain agents
+- `data-analyst`, если затронуты метрики или данные
+- Нужные профильные роли
 
-## Steps
+## Шаги
 
-1. Clarify value, users, constraints, and risks.
-2. Split items until each has one clear outcome.
-3. Add acceptance criteria and required artifacts.
-4. Assign owner and reviewer agents.
-5. Add Linear-ready metadata when known.
-6. Mark status as `ready` only when DoR is met.
+1. Уточните ценность, пользователей, ограничения и риски.
+2. Разделите работу так, чтобы у каждого пункта был один ясный результат.
+3. Добавьте критерии приёмки и необходимые материалы.
+4. Отделяйте подтверждённую ответственность от предлагаемых ролей и рецензентов.
+5. Используйте `linear-export`, только если запрошено сопоставление или синхронизация с Linear.
+6. Проверьте порядок зависимостей и согласованные критерии готовности, прежде чем присвоить принятый в проекте статус готовности к работе.
 
-## Outputs
+## Результат
 
-- project backlog in the response or an approved project documentation destination when persistence is requested
-- backlog items matching `templates/backlog-item.yaml`
+- Бэклог проекта в ответе или в согласованном месте документации, если запрошено сохранение.
+- Пункты в запрошенном формате; `templates/backlog-item.yaml` необязателен.

@@ -1,33 +1,33 @@
-# Performance Report
+# Отчёт о производительности
 
-## Objective
-
--
-
-## Environment
+## Цель
 
 -
 
-## Baseline
+## Среда
 
 -
 
-## Workload
+## Исходный вариант для сравнения
 
 -
 
-## Results
+## Нагрузка
 
 -
 
-## Bottlenecks
+## Результаты
 
 -
 
-## Changes
+## Узкие места
 
 -
 
-## Risks
+## Изменения
+
+-
+
+## Риски
 
 -

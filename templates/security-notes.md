@@ -1,33 +1,33 @@
-# Security Notes
+# Сведения о безопасности
 
-## Scope
-
--
-
-## Identity And Access
+## Область проверки
 
 -
 
-## Secrets
-
-Reference `access-map.yaml`. Do not store secret values here.
-
-## Network
+## Идентификация и доступ
 
 -
 
-## Supply Chain
+## Секреты
+
+Ссылайтесь на `access-map.yaml`. Не храните здесь значения секретов.
+
+## Сеть
 
 -
 
-## Data Protection
+## Цепочка поставки
 
 -
 
-## Risks
+## Защита данных
 
 -
 
-## Required Follow-Up
+## Риски
+
+-
+
+## Необходимые дальнейшие действия
 
 -

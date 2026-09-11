@@ -1,28 +1,28 @@
-# Sprint Brief
+# План спринта
 
-## Sprint
+## Спринт
 
-- Name:
-- Dates:
-- Goal:
-- Mode: sprint
+- Название:
+- Даты:
+- Цель:
+- Режим: sprint
 
-## Scope
-
--
-
-## Definition Of Ready
+## Объём работ
 
 -
 
-## Definition Of Done
+## Критерии готовности к началу (DoR)
 
 -
 
-## Risks And Dependencies
+## Критерии завершения (DoD)
 
 -
 
-## Planned Artifacts
+## Риски и зависимости
+
+-
+
+## Планируемые материалы
 
 -

@@ -1,24 +1,24 @@
-# Workflow: Async Standup
+# Процесс: асинхронный статус
 
-## Trigger
+## Когда применять
 
-Use when an asynchronous standup is requested or a status update is part of an established sprint process. Answer ordinary status questions directly without introducing sprint artifacts.
+Когда запрошен асинхронный стендап или обновление статуса входит в действующий процесс спринтов. На обычный вопрос о статусе отвечайте прямо, без создания документов спринта.
 
-## Agents
+## Роли
 
 - `scrum-master`
 - `project-manager`
 - `context-steward`
 
-## Steps
+## Шаги
 
-1. Read the available sprint backlog, relevant prior updates, blockers, and validation evidence.
-2. Summarize done, next, blockers, and risk changes.
-3. Escalate unresolved blockers to the right owner agent.
-4. Return the update; save a standup artifact only when persistence is requested or agreed for this process.
+1. Изучите доступный бэклог спринта, существенные предыдущие обновления, препятствия и подтверждения проверок.
+2. Сравните с предыдущей точкой отсчёта; различайте реализацию, валидацию, выпуск и приёмку.
+3. Покажите препятствия и необходимые решения; не выдумывайте ответственных и не отправляйте эскалации за пределами запроса.
+4. Верните статус; сохраняйте отдельный документ, только если это запрошено или согласовано для данного процесса.
 
-## Outputs
+## Результат
 
-- standup update in the response or the approved project documentation destination
-- optional durable context at `<context-root>/projects/<project>/sprints/<sprint>/standups/YYYY-MM-DD.md`, where `<context-root>` is the configured destination; check its audience and visibility before including private information
-- updated blockers when needed
+- Статус в ответе или в согласованном месте документации проекта.
+- При необходимости сохраняемый контекст по пути `<context-root>/projects/<project>/sprints/<sprint>/standups/YYYY-MM-DD.md`, где `<context-root>` — настроенное место. Перед включением частных сведений проверьте аудиторию и видимость.
+- Обновлённый перечень препятствий, если нужно.

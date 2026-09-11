@@ -1,41 +1,41 @@
-# Model Card
+# Карточка модели
 
-## Model
-
--
-
-## Intended Use
+## Модель
 
 -
 
-## Data
+## Предполагаемое применение
 
 -
 
-## Features
+## Данные
 
 -
 
-## Metrics
+## Признаки
 
 -
 
-## Evaluation Slices
+## Метрики
 
 -
 
-## Limitations
+## Срезы оценки
 
 -
 
-## Deployment
+## Ограничения
 
 -
 
-## Monitoring
+## Развёртывание
 
 -
 
-## Rollback
+## Мониторинг
+
+-
+
+## Откат
 
 -

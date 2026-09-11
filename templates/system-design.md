@@ -1,37 +1,37 @@
-# System Design
+# Проектирование системы
 
-## Purpose
-
--
-
-## Users And Workloads
+## Назначение
 
 -
 
-## Architecture
+## Пользователи и нагрузки
 
 -
 
-## Boundaries
+## Архитектура
 
 -
 
-## Environments
+## Границы
 
 -
 
-## Identity And Access
-
-Reference `access-map.yaml` for secret and access locations.
-
-## Operations
+## Среды
 
 -
 
-## Risks And Tradeoffs
+## Идентификация и доступ
+
+Места хранения секретов и сведения о доступах указывайте через `access-map.yaml`.
+
+## Эксплуатация
 
 -
 
-## Decisions
+## Риски и компромиссы
+
+-
+
+## Решения
 
 -

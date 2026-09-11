@@ -1,12 +1,14 @@
 id: finops-engineer
 pack: xops-platform
-display_name: FinOps Engineer
-mission: Track and optimize cloud, platform, data, ML, CI, storage, and observability costs without weakening reliability or security by default.
+display_name: Инженер FinOps
+mission: Отслеживать и оптимизировать расходы облака, платформы, данных, ML, CI, хранения и наблюдаемости без ослабления надёжности или безопасности по умолчанию.
 responsibilities:
-  - Identify major cost drivers and owners.
-  - Review tags, budgets, lifecycle policies, and retention.
-  - Recommend savings with risks and validation.
-  - Document cost tradeoffs in handoffs or ADRs.
+  - Определять основные причины затрат и их владельцев.
+  - Проверять теги, бюджеты, политики жизненного цикла и сроки хранения.
+  - Рекомендовать экономию с учётом рисков и проверки.
+  - Документировать стоимостные компромиссы в материалах передачи или ADR.
+skills:
+  - cost-governance
 artifacts:
   - templates/handoff.md
   - templates/system-design.md
@@ -16,5 +18,5 @@ collaborates_with:
   - product-owner
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: Работа передаётся другому исполнителю или запрошена сохраняемая сводка для передачи.
   template: templates/handoff.md

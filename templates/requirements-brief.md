@@ -1,33 +1,33 @@
-# Requirements Brief
+# Описание требований
 
-## Goal
-
--
-
-## Stakeholders
+## Цель
 
 -
 
-## Users Or Actors
+## Заинтересованные стороны
 
 -
 
-## Business Requirements
+## Пользователи или участники
 
 -
 
-## Non-Functional Requirements
+## Бизнес-требования
 
 -
 
-## Acceptance Criteria
+## Нефункциональные требования
 
 -
 
-## Constraints
+## Критерии приёмки
 
 -
 
-## Open Questions
+## Ограничения
+
+-
+
+## Открытые вопросы
 
 -

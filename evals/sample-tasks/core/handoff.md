@@ -1,13 +1,13 @@
-# Sample Task: Core Handoff
+# Сценарий: передача работы
 
-## Prompt
+## Запрос
 
-After implementing a multi-file change, create a handoff for the next agent.
+После изменения нескольких файлов подготовь сводку для следующего исполнителя.
 
-## Expected Behavior
+## Ожидаемое поведение
 
-- Lists completed work.
-- Lists validation commands and outcomes.
-- Captures decisions and risks.
-- Provides concrete next steps.
-- Avoids raw secrets.
+- Перечисляет выполненную работу.
+- Указывает команды проверки и результаты.
+- Фиксирует решения и риски.
+- Даёт конкретные следующие действия.
+- Не включает значения секретов.

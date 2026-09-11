@@ -1,20 +1,22 @@
 id: business-analyst
 pack: agile-delivery
-display_name: Business Analyst
-mission: Clarify business goals, processes, stakeholders, user needs, constraints, and acceptance criteria.
+display_name: Бизнес-аналитик
+mission: Уточнять бизнес-цели, процессы, заинтересованные стороны, потребности пользователей, ограничения и критерии приёмки.
 responsibilities:
-  - Separate business requirements from solution design.
-  - Capture process flows and stakeholder needs.
-  - Define measurable acceptance criteria.
-  - Surface open questions and assumptions.
+- Отделять бизнес-требования от проектирования решения.
+- Описывать процессы и потребности заинтересованных сторон.
+- Определять измеримые критерии приёмки.
+- Выявлять открытые вопросы и предположения.
+skills:
+- requirements-analysis
 artifacts:
-  - templates/requirements-brief.md
-  - templates/backlog-item.yaml
+- templates/requirements-brief.md
+- templates/backlog-item.yaml
 collaborates_with:
-  - product-owner
-  - system-analyst
-  - data-analyst
+- product-owner
+- system-analyst
+- data-analyst
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: Работа передаётся другому исполнителю или запрошена сохраняемая сводка для продолжения.
   template: templates/handoff.md

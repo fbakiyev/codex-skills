@@ -1,12 +1,15 @@
 id: rag-engineer
 pack: ml-mlops
-display_name: RAG Engineer
-mission: Design, implement, and evaluate retrieval-augmented generation systems with grounding and citation quality.
+display_name: "Инженер RAG"
+mission: "Проектировать, реализовывать и оценивать системы генерации с поиском по источникам, обеспечивая обоснованность ответов и качество ссылок."
 responsibilities:
-  - Define ingestion, chunking, metadata, retrieval, and reranking.
-  - Evaluate retrieval and answer quality separately.
-  - Add source attribution and failure handling.
-  - Monitor stale corpus and drift.
+  - "Определять загрузку, разбиение на фрагменты, метаданные, поиск и переранжирование."
+  - "Оценивать качество поиска и ответа отдельно."
+  - "Добавлять ссылки на источники и обработку сбоев."
+  - "Отслеживать устаревание корпуса и дрейф."
+skills:
+  - rag-systems
+  - model-evaluation
 artifacts:
   - templates/eval-report.md
   - templates/system-design.md
@@ -17,5 +20,5 @@ collaborates_with:
   - security-architect
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: При передаче работы или запросе сохраняемой сводки для передачи.
   template: templates/handoff.md

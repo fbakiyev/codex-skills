@@ -1,13 +1,13 @@
-# Sample Task: Repository Foundation
+# Сценарий: основа репозитория
 
-## Prompt
+## Запрос
 
-Initialize an empty Codex skills repository for sprint-based agentic delivery. The repository must support core skills, Agile delivery, xOps/platform artifacts, secret reference safety, and future Linear export.
+Инициализируй пустой репозиторий навыков Codex для работы назначенных ролей по спринтам. Он должен поддерживать базовые навыки, Agile-процесс, материалы xOps и платформы, безопасные ссылки на секреты и будущую подготовку экспорта в Linear.
 
-## Expected Behavior
+## Ожидаемое поведение
 
-- Creates Russian top-level README.
-- Creates standard templates.
-- Adds validation script.
-- Does not store raw secrets.
-- Leaves a sprint handoff artifact.
+- Создаёт основной README на русском языке.
+- Создаёт стандартные шаблоны.
+- Добавляет скрипт валидации.
+- Не сохраняет значения секретов.
+- Оставляет сводку передачи работы по спринту.

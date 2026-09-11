@@ -1,14 +1,14 @@
 ---
 name: technical-review
-description: Review a proposed technical or documentation change for concrete defects, regressions, validation gaps, and operational risk. Use for a review request or a consequential change needing independent scrutiny, not for ceremonial approval of every small edit.
+description: "Проверка предлагаемого технического изменения или документации на конкретные дефекты, регрессии, пробелы проверки и эксплуатационные риски. Применяйте по запросу на ревью или для существенного изменения, требующего независимой оценки; не вводите формальное согласование каждой мелкой правки."
 ---
 
-# Technical Review
+# Проверка изменения
 
-1. Establish the changed behavior and the acceptance criteria from the request and applicable project rules.
-2. Inspect the diff and related contracts. Prioritize failures that users or operators can encounter over stylistic preferences.
-3. Check evidence proportionate to the change. Verify relevant commands when available; do not rerun successful checks without a new change or unresolved concern.
-4. Check operational documents only when affected: for example, a changed recovery procedure needs corresponding runbook and rollback information.
-5. Report actionable findings in severity order, with location, concrete trigger, impact, and suggested correction. Use `P0`–`P3` when the project uses these levels.
+1. Определите изменившееся поведение и критерии приёмки по запросу и действующим правилам проекта.
+2. Изучите diff и связанные контракты. Отдавайте приоритет ошибкам, с которыми могут столкнуться пользователи и эксплуатация, а не стилевым предпочтениям.
+3. Проверяйте доказательства соразмерно изменению. При доступности выполняйте нужные команды; не повторяйте успешные проверки без новых изменений или нерешённых сомнений.
+4. Проверяйте эксплуатационные документы, только если изменение их затрагивает. Например, изменённая процедура восстановления требует согласованного описания в инструкции эксплуатации и плане отката.
+5. Расположите значимые замечания по серьёзности. Для каждого укажите место, конкретное условие возникновения, последствия и предлагаемое исправление. Используйте `P0`–`P3`, если эти уровни приняты в проекте.
 
-Tie every finding to evidence or an explicit requirement. Do not invent a gate for missing sprint records, private notes, or handoff when the task does not require them. If there are no findings, say so and identify material verification limits. A review request authorizes inspection and reporting; implement fixes only if they are also in scope.
+Обосновывайте замечания фактом или явным требованием. Не вводите обязательное согласование из-за отсутствия записей спринта, частных заметок или сводки передачи, если задача их не требует. Если замечаний нет, сообщите об этом и обозначьте существенные ограничения проверки. Запрос на ревью разрешает изучение и выводы; исправления выполняйте, только если они также входят в задачу.

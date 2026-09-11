@@ -1,29 +1,29 @@
-# Data Analysis
+# Анализ данных
 
-## Question Or Metric
-
--
-
-## Source Systems
+## Вопрос или метрика
 
 -
 
-## Definitions
+## Системы-источники
 
 -
 
-## Freshness And Grain
+## Определения
 
 -
 
-## Quality Checks
+## Свежесть и смысл одной строки
 
 -
 
-## Assumptions
+## Проверки качества
 
 -
 
-## Output
+## Предположения
+
+-
+
+## Результат
 
 -

@@ -1,15 +1,15 @@
-# Context Storage
+# Хранение контекста
 
-`<context-root>` is a placeholder for the destination configured by the user or project. It may be a local directory, a knowledge base, or a repository location. Use the established destination and naming conventions; do not treat the placeholder as a literal path.
+`<context-root>` обозначает место, выбранное пользователем или проектом: локальную папку, базу знаний или раздел репозитория. Используйте существующее место и правила именования; не считайте обозначение буквальным путём.
 
-For a filesystem destination, one note per project can be enough:
+Для хранения в файловой системе может быть достаточно одной заметки на проект:
 
 ```text
 <context-root>/<project>/current-state.md
 ```
 
-Keep the objective, authoritative sources, verified state, consequential decisions, blockers, and next action. Add a separate decision or transfer note only when needed. Time-sensitive observations need a date, timezone, and coverage limits.
+Сохраняйте цель, достоверные источники, проверенное состояние, значимые решения, препятствия и следующее действие. Отдельная запись решения или передачи нужна только по необходимости. Наблюдения, актуальность которых зависит от времени, должны содержать дату, часовой пояс и границы охвата.
 
-Check the audience and visibility before saving. Public locations must not receive private context. Keep credentials in the approved secret store, and omit unnecessary personal data and raw conversation dumps.
+Перед сохранением проверьте аудиторию и видимость. Частный контекст не должен попадать в публичные места. Храните учётные данные в согласованном защищённом хранилище; не включайте лишние персональные данные и полные выгрузки разговоров.
 
-User-facing ADRs, backlogs, runbooks, meeting minutes, and project handovers keep their existing source-of-truth locations. Reference them rather than duplicating entire artifacts. Change historical records only within the requested maintenance scope.
+Пользовательские ADR, бэклоги, инструкции эксплуатации, протоколы встреч и документы передачи проекта сохраняют существующее место как достоверный источник. Ссылайтесь на них, не дублируя целые документы. Меняйте исторические записи только в пределах запрошенного сопровождения.

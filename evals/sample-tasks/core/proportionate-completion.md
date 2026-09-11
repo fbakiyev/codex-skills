@@ -1,17 +1,17 @@
-# Sample Task: Proportionate Completion
+# Сценарий: соразмерное завершение
 
-## Prompt
+## Запрос
 
-In the supplied paragraph, replace “Monday” with “Tuesday”. Return only the corrected paragraph. Do not edit any files.
+В приведённом абзаце замени «Monday» на «Tuesday». Верни только исправленный абзац. Не меняй файлы.
 
-Paragraph: The workshop is on Monday. Attendance is optional.
+Абзац: The workshop is on Monday. Attendance is optional.
 
-## Expected Behavior
+## Ожидаемое поведение
 
-- Returns “The workshop is on Tuesday. Attendance is optional.”
-- No discovery, sprint, saved context, handoff, or skill-library update.
-- Preserves the optional attendance condition.
+- Возвращает «The workshop is on Tuesday. Attendance is optional.»
+- Не запускает изучение проекта или спринт, не сохраняет контекст, не создаёт сводку передачи и не обновляет библиотеку навыков.
+- Сохраняет условие необязательного участия.
 
-## Fail Criteria
+## Признаки ошибки
 
-Writes a file, asks for permission to perform the authorized edit, creates process artifacts, or changes the attendance requirement.
+Записывает файл, спрашивает разрешение на уже запрошенную правку, создаёт документы процесса или меняет условие участия.

@@ -1,13 +1,13 @@
-# Sample Task: Agile Sprint Planning
+# Сценарий: планирование спринта
 
-## Prompt
+## Запрос
 
-Plan a two-week sprint for platform and backend work from a rough goal. Produce sprint goal, backlog items, owners, reviewers, DoD, risks, and required artifacts.
+Спланируй двухнедельный спринт для платформы и backend по предварительной цели. Подготовь цель спринта, пункты бэклога, ответственных, рецензентов, критерии завершения (DoD), риски и необходимые материалы.
 
-## Expected Behavior
+## Ожидаемое поведение
 
-- Does not simulate meetings.
-- Produces sprint brief and backlog items.
-- Uses owner and reviewer agents.
-- Captures validation and artifact requirements.
-- Separates research spikes from implementation.
+- Не имитирует проведение встреч.
+- Готовит план спринта и пункты бэклога.
+- Использует роли ответственных и рецензентов.
+- Фиксирует требования к проверке и материалам.
+- Отделяет исследования от реализации.

@@ -1,30 +1,30 @@
-# Workflow: Sprint Review And Retro
+# Процесс: обзор спринта и ретроспектива
 
-## Trigger
+## Когда применять
 
-Use when a sprint or delivery review and retrospective are requested or explicitly included in the established delivery process.
+Когда обзор спринта или поставки и ретроспектива запрошены либо явно включены в действующий процесс.
 
-## Agents
+## Роли
 
 - `delivery-reviewer`
 - `scrum-master`
 - `product-owner`
 - `technical-reviewer`
-- `skill-curator` only when improvements to skills are requested
+- `skill-curator`, только если запрошено улучшение навыков
 
-## Steps
+## Шаги
 
-1. Compare completed items against sprint goal and acceptance criteria.
-2. Check validation evidence.
-3. List shipped, partial, carryover, and blocked work.
-4. Capture retro observations.
-5. Propose backlog items for improvements; create skill improvement records or modify skills only when that work is requested.
+1. Сопоставьте завершённые пункты с целью спринта и критериями приёмки.
+2. Проверьте подтверждения валидации и приёмки; одна реализация не доказывает выпуск или принятие.
+3. Перечислите выпущенную, частично выполненную, переносимую и заблокированную работу.
+4. Отделяйте наблюдения о процессе от гипотез о причинах; предлагайте улучшения с измеримым результатом.
+5. Предложите пункты бэклога для улучшений; создавайте записи улучшения навыков или меняйте навыки, только если это запрошено.
 
-## Outputs
+## Результат
 
-- sprint review
-- retro
-- carryover backlog items
-- skill improvement records only when requested
+- Обзор спринта.
+- Ретроспектива.
+- Переносимые пункты бэклога.
+- Записи улучшения навыков только по запросу.
 
-Return the review in the response or use an approved project documentation destination for requested durable reports.
+Верните обзор в ответе или используйте согласованное место документации для запрошенного сохраняемого отчёта.

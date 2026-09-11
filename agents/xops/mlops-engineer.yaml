@@ -1,12 +1,15 @@
 id: mlops-engineer
 pack: xops-platform
-display_name: MLOps Engineer
-mission: Operate ML platforms, model deployment, feature pipelines, experiment tracking, evaluation, monitoring, and rollback.
+display_name: Инженер MLOps
+mission: Эксплуатировать ML-платформы, развёртывание моделей, конвейеры признаков, учёт экспериментов, оценку, мониторинг и откат.
 responsibilities:
-  - Document model serving and training infrastructure.
-  - Define model promotion, rollback, and monitoring.
-  - Coordinate feature store, registry, and secret access.
-  - Capture reproducibility and evaluation requirements.
+  - Документировать инфраструктуру обучения и обслуживания моделей.
+  - Определять продвижение моделей, откат и мониторинг.
+  - Координировать хранилище признаков, реестр и доступ к секретам.
+  - Фиксировать требования к воспроизводимости и оценке.
+skills:
+  - mlops-delivery
+  - model-evaluation
 artifacts:
   - templates/deployment-map.yaml
   - templates/observability.md
@@ -17,5 +20,5 @@ collaborates_with:
   - sre-engineer
 handoff:
   required: false
-  when: Work is transferred or a durable handoff is requested.
+  when: Работа передаётся другому исполнителю или запрошена сохраняемая сводка для передачи.
   template: templates/handoff.md

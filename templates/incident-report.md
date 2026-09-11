@@ -1,37 +1,37 @@
-# Incident Report
+# Отчёт об инциденте
 
-## Summary
-
--
-
-## Severity And Impact
+## Краткое описание
 
 -
 
-## Timeline
+## Серьёзность и последствия
 
 -
 
-## Detection
+## Хронология
 
 -
 
-## Mitigation
+## Обнаружение
 
 -
 
-## Root Cause
+## Ограничение последствий
 
 -
 
-## What Went Well
+## Первопричина
 
 -
 
-## What Did Not Work
+## Что сработало
 
 -
 
-## Follow-Up Actions
+## Что не сработало
+
+-
+
+## Дальнейшие действия
 
 -
